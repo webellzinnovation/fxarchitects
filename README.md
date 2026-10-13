@@ -1,6 +1,6 @@
 # FXARCH - F(x) Architects interactive city
 
-Version 0.11.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
+Version 0.12.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
 
 ## Run and deploy
 
@@ -123,3 +123,20 @@ Metro speed is 1.7 times its earlier rate (about 28 seconds for a roundtrip at 1
 Auto mode cycles day, evening, night at 60-second boundaries with an eight-second sky/light transition into each state. It uses real visible time, independent of city speed, and pauses while Motion is off, the project dialog is open or the page is hidden. Auto starts off under reduced-motion preference. Manual Day/Night disables Auto; the Auto button re-enables it. Manual theme choice persists; Auto/speed settings are session-only. Window glow switches with the night phase while sky and scene lighting blend.
 
 Final collision coverage: 160,603 non-ground/non-foliage context/project/outskirts triangle bounds, 15 supports/six stair runs, station deck/roof envelopes, 500 metro deck samples and 1,000 steam samples: no hits. Layout/Motion tests have no errors or outer overflow at 1280/390/320; moving walkers and road vehicles freeze correctly. Cycle tests verify evening/night/day, speed and manual override. Full admin logic regression and separate actual rendering inspection pass. Current headless scene: about 507k triangles/521 calls desktop, 459k/428 at 390px and 434k/393 at 320px. Physical-phone FPS is unverified and the extra geometry may cost more on weaker devices. No backend, account, card, billing or Firebase Blaze was added.
+
+
+## Revision 0.12: mixed footprints, architecture details and night hierarchy
+
+Six footprint families replace the repeated square-ring plan: L with side garden, offset U, staggered slabs, split courts, asymmetric perimeter and terraced L. Rectangular masses, short wings and offset/side/split gardens mix across the existing unequal plots. This first footprint step retained the prior heights and road axes; the later steering below lowers heights and adds gentle road bends. Metro and project assignments remain intact. This is not the exact reference masterplan.
+
+White context parcels now mix four window rhythms, roof service units, stair bulkheads, parapets, penthouses, pitched/hip roofs, occasional rounded-corner masses and shallow balcony rails. Detail stays procedural and white-clay, not a literal reproduction of the reference renders. Natural-feeling sun shadows use a 2.2-radius PCF filter and lower day exposure/ambient fill, at the existing shadow-map resolution. This is raster lighting, not baked ambient occlusion/path tracing.
+
+At night roughly one quarter of the new context window geometry emits at .18 intensity; remaining context panes stay dark. Other context/outskirts glazing is dimmed to .12. Project materials are isolated before accent changes so shared white/context materials are not brightened: warm project windows 1.25, subtle facade emissive accent .18. This emphasizes project buildings without extra real-time point lights. Day restores original emissive values. Night accents also cover loaded local project models; per-upload geometry collision safety remains unverified.
+
+The revised context collision sweep covers 58,319 non-ground/non-foliage triangle bounds, all 21 support/stair envelopes, 500 metro deck samples and 1,000 steam samples with no hits. It does not guarantee collision-free future uploads. New Admin projects are assigned the first free matching non-reserved plot; no exact spot/orientation picker is provided. Model normalization is fixed at maximum 3 units across X/Z and 3.5 high, not a polygon-specific physical-scale fit. Clearing browser storage removes local uploads; visitors cannot see them.
+
+
+Later steering in the same v0.12 round lowers context to house-scale (roughly .65-1.2 wall height plus roofs/setbacks), especially around project plots. Only two context parcels, at opposite outside corners, retain 3-unit landmark height. Northern housing is also lowered. Project designs are not rescaled to fake their height. Gentle street bends are introduced by a continuous coordinate warp (maximum local offsets below 1.15/.95 units), fading out at the metro z=3, railway x=+/-16 and outer boundaries. Vehicles, walkers, intersections and plot centers follow the warped street geometry. Block buildings remain orthogonal within their parcel centers; this is gentle organic street variation, not a wholly new radial/diagonal network. Existing rail corridors remain fixed.
+
+
+Final v0.12 verification: 1280/390/320 layout/Motion no errors/outer overflow; rail dwell/cruise, walkers/vehicles freeze/resume; Auto stage/speed/manual override and manual theme persistence pass. Admin save/reload, GLB replacement/removal, rooms, invalid-file rejection and deletion pass (logic harness only disables rendering, actual scene inspected separately). Actual default overview, top-down, architectural closeup and 390px night pixels inspected. Current scene ~409k triangles/592 calls desktop, ~370k/469 at 390px, ~363k/440 at 320px. JS ~705kB/188kB gzip. Physical-phone FPS unverified; fixed shadow filtering is not photoreal ray tracing. No account, backend, card or paid service added.
