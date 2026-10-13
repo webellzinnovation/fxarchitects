@@ -1,6 +1,6 @@
 # FXARCH - F(x) Architects interactive city
 
-Version 0.4.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
+Version 0.6.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
 
 ## Run and deploy
 
@@ -48,14 +48,20 @@ Screenshots were visually inspected, including mobile dialog bottom content and 
 
 Three.js is MIT licensed; see THIRD_PARTY_LICENSES.txt. Dependency licenses remain with their packages.
 
-## Revision 0.5: bundled licensed house sample
+## Revision 0.6: staged modern villa and living city
 
-A fourth colored project, `Suburban house / model sample`, bundles Kenney's City Kit Suburban 2.0 `building-type-e.glb` on a corner plot. This is a third-party demo sample, not F(x) Architects' work. The original palette texture is embedded into the GLB; no external texture request is needed. Self-contained model: 157,344 bytes. Two included JPEGs are actual screenshots of this model rendered by the site's Three.js orbit viewer, not photographs or AI images; together they are about 50 KB. Geometry was not decimated because the complete model is already small. All runtime assets are local and relative-path compatible.
+The fourth sample now uses Innerscene's original Modern flat-roof villa, CC0 1.0 Universal, verified October 13, 2026 on the model source and library terms. It replaces the earlier Kenney house. Source and license links are also in project description/license text:
 
-License verified October 13, 2026 on creator's source page and creator's itch page, and corroborated by the included License.txt: CC0 1.0 Universal. Attribution is retained in project description, source link and `public/models/KENNEY-LICENSE.txt`.
+- https://www.innerscene.com/tools/library/3d-parts/modern-flat-roof-villa-12ed3c60
+- https://www.innerscene.com/tools/library/terms
+- Observed direct download: https://www.innerscene.com/api/library/modern-flat-roof-villa-12ed3c60/download
 
-- Source: https://kenney.nl/assets/city-kit-suburban
-- Creator license statement: https://kenney-assets.itch.io/city-kit-suburban
-- Download: https://kenney.nl/media/pages/assets/city-kit-suburban/2c871b7af2-1745479373/kenney_city-kit-suburban_20.zip
+Original 15,983,840-byte GLB contains 12,740 triangles. Embedded textures were reduced to 512px JPEG, resulting in 1,181,448 bytes without a compression decoder. Materials are restyled dark charcoal with warm emissive glazing. A landscape base, steps, faceted trees/shrubs, small lights and simple stage props are added. Diffuse dusk-like lighting is used in the dialog; the city remains daytime white clay. Two exact staged-model screenshots are bundled. All third-party/demo authorship and edits are stated. This model does NOT provide the reference's furnished cutaway rooms. The exterior presentation is closer; it is not an exact reconstruction, true interior walkthrough or a F(x) project. The source and stage meshes are batched by material for lower draw calls.
 
-`node test-sample.mjs` verifies bundled model rendering, two images, no page errors and phone dialog overflow. `--renders` regenerates the two JPEGs from the model. If an earlier device-local project used the newly occupied plot, it is retained and moved to another available plot of its same type on sync, then saved locally. All earlier local limitations still apply.
+All trees now use vivid-green low-poly faceted crowns and brown trunks: broad round, tall oval, layered pine and shrubs, with occasional grass/stone accent bases. The old single-oval style is removed.
+
+The page and city canvas are fixed to the viewport. Wheel/touch on the scene orbit/zoom instead of scrolling the page. The desktop sidebar and phone's compact project panel scroll independently; dialogs still scroll for full content. Grey roads and black cars contrast the white buildings. Walking humans have moving legs/arms and path travel.
+
+White-clay metro viaduct includes pillars, track, train windows/roof details and gentle back-and-forth motion. A white-clay steam engine circles a peripheral railway, with wheels, boiler, cabin, tender and four cheap smoke puffs. Both share the existing Motion toggle and pause/reduced-motion rules. These are procedural demonstrations, not real railway engineering or plans. Rail static geometry is batched; animation counts are capped.
+
+`node test-v06.mjs` checks metro/steam movement, walking limb matrices, Motion freeze, fixed scene bounds and zero page scroll at 1280/390. `node test-sample.mjs` verifies model/images and captures desktop/phone details; `--renders` rebuilds exact-model JPEGs. Test assets are not deployed. Physical-phone performance remains unverified; headless software WebGL screenshots are layout evidence, not a GPU benchmark.

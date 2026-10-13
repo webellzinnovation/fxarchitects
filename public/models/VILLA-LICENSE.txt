@@ -1,0 +1,6 @@
+Modern flat-roof villa. Source author: Innerscene (original model).
+CC0 1.0 Universal, verified October 13, 2026.
+https://www.innerscene.com/tools/library/3d-parts/modern-flat-roof-villa-12ed3c60
+https://www.innerscene.com/tools/library/terms
+https://creativecommons.org/publicdomain/zero/1.0/
+Modified for this demo: textures resized/re-encoded, dark facade and warm window materials, landscaping, steps, lights and simple stage props. Not F(x) Architects' work. Furnished cutaway is not part of the source model.

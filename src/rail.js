@@ -1,0 +1,21 @@
+import * as THREE from 'three';
+import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
+export function installRail(scene){
+ const white=new THREE.MeshStandardMaterial({color:0xf3f2ed,roughness:.88}),shade=new THREE.MeshStandardMaterial({color:0xc9cec8,roughness:.9}),glass=new THREE.MeshStandardMaterial({color:0x87918d,roughness:.8});
+ const staticG=new THREE.Group();scene.add(staticG);const cubeGeo=new THREE.BoxGeometry(1,1,1);
+ function box(g,x,y,z,w,h,d,m=white){const o=new THREE.Mesh(cubeGeo,m);o.position.set(x,y,z);o.scale.set(w,h,d);o.castShadow=true;o.receiveShadow=true;g.add(o);return o;}
+ function cylinder(g,x,y,z,r,l,m=white){const o=new THREE.Mesh(new THREE.CylinderGeometry(r,r,l,10),m);o.position.set(x,y,z);o.castShadow=true;g.add(o);return o;}
+ // A high, slender viaduct along the northern cross-city corridor.
+ box(staticG,0,4.1,-7,43,.24,1.25);for(const z of [-7.58,-6.42])box(staticG,0,4.32,z,43,.23,.09);
+ for(let x=-20;x<=20;x+=4){box(staticG,x,1.95,-7,.32,3.9,.45);box(staticG,x,3.9,-7,.8,.18,1.0);box(staticG,x,.04,-7,.6,.12,.7);}
+ for(const z of [-7.22,-6.78])box(staticG,0,4.3,z,43,.06,.045,shade);for(let x=-21;x<21;x+=.6)box(staticG,x,4.26,-7,.08,.04,.68,shade);
+ const metro=new THREE.Group();scene.add(metro);for(let c=0;c<3;c++){const x=(c-1)*1.65;box(metro,x,.28,0,1.5,.52,.58);box(metro,x,.58,0,1.42,.09,.55);box(metro,x,.05,0,1.32,.08,.43,shade);for(let k=0;k<5;k++)for(const z of [-.296,.296])box(metro,x-.53+k*.26,.34,z,.19,.19,.012,glass);for(const z of [-.29,.29])box(metro,x+.56,.27,z,.04,.4,.02,shade);box(metro,x,.66,0,.44,.07,.35,shade);}box(metro,2.34,.31,0,.02,.2,.42,glass);box(metro,-2.34,.31,0,.02,.2,.42,glass);
+ const pts=[[-22,-22],[-12,-23],[12,-23],[22,-22],[23,-12],[23,12],[22,22],[12,23],[-12,23],[-22,22],[-23,12],[-23,-12]].map(([x,z])=>new THREE.Vector3(x,0,z));const curve=new THREE.CatmullRomCurve3(pts,true,'centripetal');
+ for(let i=0;i<270;i++){const t=i/270,p=curve.getPointAt(t),v=curve.getTangentAt(t),angle=Math.atan2(v.x,v.z);const tie=box(staticG,p.x,-.025,p.z,.8,.08,.10,shade);tie.rotation.y=angle;for(const sign of [-1,1]){const q=p.clone().add(new THREE.Vector3(-v.z,0,v.x).multiplyScalar(sign*.23));const rail=box(staticG,q.x,.04,q.z,.045,.055,.62,white);rail.rotation.y=angle;}}
+ const steam=new THREE.Group();scene.add(steam);box(steam,0,.23,0,.58,.12,1.5);const boiler=cylinder(steam,0,.52,.17,.23,1.03);boiler.rotation.x=Math.PI/2;box(steam,0,.58,-.63,.57,.6,.55);box(steam,0,.93,-.63,.68,.09,.65);for(const x of [-.291,.291])box(steam,x,.67,-.64,.015,.25,.27,glass);cylinder(steam,0,.89,.53,.1,.34);cylinder(steam,0,1.07,.53,.14,.06);cylinder(steam,0,.81,.09,.09,.15);box(steam,0,.23,.87,.64,.14,.2);for(let k=0;k<3;k++)for(const x of [-.33,.33]){const wheel=cylinder(steam,x,.2,-.35+k*.42,.17,.06,shade);wheel.rotation.z=Math.PI/2;box(steam,x,.2,.08,.055,.05,1.02,white);}box(steam,0,.3,-1.4,.59,.13,.75);box(steam,0,.55,-1.4,.59,.38,.72);box(steam,0,.74,-1.4,.43,.05,.55,shade);
+ const smoke=[];const smokeMat=new THREE.MeshStandardMaterial({color:0xf3f3ee,transparent:true,opacity:.46,depthWrite:false,roughness:1});for(let i=0;i<4;i++){const p=new THREE.Mesh(new THREE.IcosahedronGeometry(1,1),smokeMat);scene.add(p);smoke.push(p);}
+ // Batch track/pillars; dynamic train detail stays capped to two small groups.
+ staticG.updateMatrixWorld(true);const buckets=new Map(),old=[];staticG.traverse(o=>{if(!o.isMesh)return;let geo=o.geometry.clone().applyMatrix4(o.matrixWorld);if(geo.index)geo=geo.toNonIndexed();if(!buckets.has(o.material))buckets.set(o.material,[]);buckets.get(o.material).push(geo);old.push(o);});old.forEach(o=>o.removeFromParent());for(const [mat,geos]of buckets){const mesh=new THREE.Mesh(mergeGeometries(geos),mat);mesh.castShadow=true;mesh.receiveShadow=true;staticG.add(mesh);geos.forEach(g=>g.dispose());}
+ const update=time=>{metro.position.set(Math.sin(time*.018)*18,4.35,-7);const t=(time*.003)%1,p=curve.getPointAt(t),v=curve.getTangentAt(t);steam.position.copy(p);steam.rotation.y=Math.atan2(v.x,v.z);for(let i=0;i<4;i++){const age=(time*.4+i*.25)%1,pp=new THREE.Vector3(0,1.1+age*.9,.53-age*.5).applyAxisAngle(new THREE.Vector3(0,1,0),steam.rotation.y).add(p);smoke[i].position.copy(pp);smoke[i].scale.setScalar(.10+age*.20);}};
+ update(0);return {update,metro,steam};
+}
