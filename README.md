@@ -49,8 +49,16 @@ Do not upgrade to Blaze under the no-card/no-paid-services requirement. Verify a
 
 `node test.mjs` runs desktop/mobile layout and UI checks using a local Chrome binary at `/usr/bin/google-chrome-stable`. Adapt this path for your machine. `node test-interactions.mjs` checks direct scene selection, orbit changes and the mobile detail scroll. The tests serve the production build on localhost. Test artifacts are not required for deployment.
 
-Production entry and assets returned HTTP 200 locally. No public hosting URL is claimed in this bundle. Performance was tested with headless software WebGL, not a physical phone. The production JS is roughly 526 kB (133 kB gzip), primarily Three.js. Real models will need size budgets and mobile testing.
+Production entry and assets returned HTTP 200 locally. No public hosting URL is claimed in this bundle. Performance was tested with headless software WebGL, not a physical phone. The production JS is roughly 541 kB (138 kB gzip), primarily Three.js. Real models will need size budgets and mobile testing.
 
 ## Third-party software
 
 Three.js is MIT licensed; its license is included in THIRD_PARTY_LICENSES.txt. Dependency licenses remain with their packages.
+
+## Revision 0.2: living city
+
+Updated from the user's natural-green / blue-water reference. Buildings stay white except the three labeled demos. Seven procedural Indian-inspired form families include courtyards, verandas, terraced setbacks, jaali-like screens, chajja shades, fins and pavilions. Unequal blocks and nonlinear coordinate warping create bending roads and varied orientations instead of a strict straight grid; this remains a structured procedural street network, not a surveyed organic town. Typed plot polygons are retained for future allocation. A blue river edge, dense green planting and three muted terracotta cafe umbrellas add public life.
+
+Ambient motion is capped at 12 cars and 24 pedestrians, using four dynamic instanced meshes. Movement follows road curves. Pedestrians have a gentle idle/walk bob; motion pauses when the project dialog is open, the document is hidden, or the user turns Motion off. Reduced-motion preference defaults ambient motion off. Trees are static batched geometry. No actual human routes or real-world behavior claimed.
+
+Vite base is './' so the built bundle works on a GitHub Pages project subpath as well as ordinary static hosting.
