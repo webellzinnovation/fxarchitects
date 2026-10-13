@@ -1,6 +1,6 @@
 # FXARCH - F(x) Architects interactive city
 
-Version 0.15.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
+Version 0.16.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
 
 ## Run and deploy
 
@@ -172,8 +172,24 @@ Existing device-local projects from older layouts are automatically reassigned t
 
 Modern rustic villa: ArchNovaStudio on CGTrader, https://www.cgtrader.com/free-3d-models/exterior/house/modern-rustic-villa-luxury-countryside-house-3d-model . User-supplied Royalty Free asset, no AI training. Only the OBJ was supplied; villa.mtl and textures are missing. Two distant flat ground triangles were removed so the villa itself, not a 96 m stray plane, determines its footprint. Original villa envelope is about 11 x 17.55 x 8.56 m. Optimized GLB is 60,025 triangles in two material draws, 1.10 MB. Neutral replacement materials are intentional and labeled.
 
-Uploaded architecture: source/name/creator not yet supplied. OBJ declares metre units, with 34.49 x 36.73 x 27.01 m bounds. Untitled.mtl and textures are missing. GLB is reduced from 315,495 to 59,938 triangles, one draw, 1.55 MB. Its labeled neutral finish is not the original material appearance.
+Modern Villa by IradaGurbanova on CGTrader: https://www.cgtrader.com/free-3d-models/architectural/engineering/modern-villa-free-3d-model . The source download has OBJ and STL only, with no MTL or textures; original colours are unavailable. OBJ declares metre units, with 34.49 x 36.73 x 27.01 m bounds. Untitled.mtl and textures are missing. GLB is reduced from 315,495 to 59,938 triangles, one draw, 1.55 MB. Its labeled neutral finish is not the original material appearance.
 
 Both demos are uniformly fitted to the assigned parcel and capped at 10 m display height, preserving proportions. This can reduce an original model's size; it is a plot-fit study, not a survey replica. Conversion script is convert-obj-demo.mjs; raw OBJ inputs are intentionally not bundled. Geometry simplification keeps a low relative error, but physical-phone FPS remains unmeasured.
 
 Final admin regression disables background city rendering during data/form checks to keep software-rendered browser tests responsive. Visual and motion tests use rendering enabled.
+
+## v0.16 update
+
+Rustic villa now uses the supplied original MTL diffuse colours, opacity and all ten referenced JPG texture maps, embedded in a self-contained GLB. Texture size is capped at 512 px. UV seams and source materials are kept; geometry is simplified by material with a low-error fallback. Final model is 36,086 triangles, 34 material draws, 2.79 MB. Prior v0.15 neutral-material notes above are superseded for this villa only. Project 6 remains neutral because its source contains no materials/textures; it is now credited as Modern Villa by IradaGurbanova with its source link.
+
+Rustic villa moves to central parcel radial-0-3-0-0 at (-0.35, 12.64) scene units, the closest suitable remaining core plot, not the junction/river itself. It is uniformly reduced to fit the ~14.05 m square envelope. All six parcel checks remain clear.
+
+Local divider roads now meet the interpolated polygonal ring boundary rather than stopping short at mismatched curved radii. Join discs fill strip corner pinches. All 72 local-lane endpoints meet rings within numerical tolerance. Each of 871 generic house fronts faces the nearest road normal, aligned to that road, with a visible front door. Trees along the river reduced from 70 to 24, context tree planting reduced roughly threefold; project-specific model trees and roundabout accents remain.
+
+Walk is an exterior city exploration mode at 1.7 m eye height. Click Walk, use WASD or arrow keys, drag to look; mobile has hold-to-move arrow buttons. Orbit returns the prior camera, Escape leaves walk, Return to street resets the start. Basic guards keep the camera away from project envelopes, context-house centres and water. It is not a navigation-mesh interior walkthrough or a complete physics simulator. Interior room studies remain separate orbit cutaways.
+
+Final checks: six project polygons/mesh vertices clear of 52 road corridors and both rails; rail support/deck tests clear; original texture colour visible in inspected pixels; desktop/mobile walk movement/look/orbit return/reset verified; admin and material-preservation checks pass; 1280/390/320 overflow checks pass. Physical-device FPS remains unmeasured.
+
+v0.16 trees use four selected species (01/04/07/11) from the user-supplied CGTrader Low Poly Trees Mega Pack (item 3304599), not the previous Quaternius tree. They share one 512px colour atlas and are instanced per species/parent. Reduced planting counts remain. Designer name is pending. The source FBX and archive are not bundled in deployment; only selected geometry and atlas are served.
+
+The district-realism fabric pass is still pending after v0.16. Front-facing houses and road joins are fixed, but v0.16 still repeats low-rise house forms. The planned next pass varies heights, footprints, roofs and setbacks, keeps the original road/river skeleton, and does not import Kusatsu geometry.

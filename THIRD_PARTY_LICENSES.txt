@@ -24,8 +24,15 @@ MODERN RUSTIC VILLA
 User-supplied OBJ from CGTrader by ArchNovaStudio.
 Source: https://www.cgtrader.com/free-3d-models/exterior/house/modern-rustic-villa-luxury-countryside-house-3d-model
 Royalty Free license supplied by user context. No AI training.
-Converted, simplified, neutral material replacement; referenced MTL/textures not supplied.
+Converted, simplified; v0.16 uses user-supplied original MTL and all ten referenced JPG texture maps, resized for this web demo.
 
-UPLOADED ARCHITECTURE SAMPLE
-User supplied project-model-2.obj to include as a demo. Name/creator/source not yet supplied. No creator is invented.
+MODERN VILLA / IRADAGURBANOVA
+User supplied project-model-2.obj to include as a demo.
+Model: Modern Villa free 3D model by IradaGurbanova on CGTrader.
+Source: https://www.cgtrader.com/free-3d-models/architectural/engineering/modern-villa-free-3d-model
+The source download has OBJ and STL only, with no MTL or textures. Original colours are unavailable.
 Converted, simplified, neutral material replacement; referenced Untitled.mtl/textures not supplied.
+
+LOW POLY TREES MEGA PACK
+User-supplied CGTrader free pack, item 3304599. Designer name not yet supplied.
+Selected species 01, 04, 07, 11 from LowPoly_Tree_Collection_01.fbx, using its shared colour atlas at 512px. Instanced at reduced planting density. No claim of CC0 is made for this pack. Original Quaternius CC0 asset attribution above is retained for older revisions.

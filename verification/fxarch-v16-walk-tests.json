@@ -1,0 +1,13 @@
+{
+  "desktop": {
+    "active": true,
+    "moves": true,
+    "eyeHeight": 0.34,
+    "orbitDisabled": true
+  },
+  "restores": true,
+  "mobileMoves": true,
+  "overflow": false,
+  "resets": true,
+  "errors": []
+}

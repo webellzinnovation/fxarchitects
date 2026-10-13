@@ -3,6 +3,14 @@
   "roads": 52,
   "rows": [
     {
+      "id": "radial-0-3-0-0",
+      "name": "Modern rustic villa / OBJ sample",
+      "roads": 0,
+      "metro": 0,
+      "steam": 0,
+      "outsideVertices": 0
+    },
+    {
       "id": "radial-0-5-0-0",
       "name": "The urban commons",
       "roads": 0,
@@ -36,15 +44,7 @@
     },
     {
       "id": "radial-2-5-0-0",
-      "name": "Uploaded architecture / OBJ sample",
-      "roads": 0,
-      "metro": 0,
-      "steam": 0,
-      "outsideVertices": 0
-    },
-    {
-      "id": "radial-2-8-0-0",
-      "name": "Modern rustic villa / OBJ sample",
+      "name": "Modern villa / IradaGurbanova",
       "roads": 0,
       "metro": 0,
       "steam": 0,

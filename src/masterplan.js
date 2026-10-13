@@ -13,10 +13,10 @@ export function masterplan(){
  for(let band=0;band<3;band++)for(let sector=0;sector<12;sector++){
   const a0=angles[sector],a1=angles[(sector+1)%12]+(sector===11?Math.PI*2:0),rm=(radii[band]+radii[band+1])/2;
   const divisions=band===0?1:band===1?2:3;
-  if(false)roads.push({curve:line([V(rm,a0),V(rm,a1)]),width:.66});
+  const boundary=(r,a)=>V(r,a0).lerp(V(r,a1),(a-a0)/(a1-a0));
   for(let k=0;k<divisions;k++){
    const l=a0+(a1-a0)*k/divisions+.028,h=a0+(a1-a0)*(k+1)/divisions-.028;
-   if(k>0)roads.push({curve:line([V(radii[band]+.9,l-.028),V(radii[band+1]-.9,l-.028)]),width:.62});
+   if(k>0)roads.push({curve:line([boundary(radii[band],l-.028),boundary(radii[band+1],l-.028)]),width:.62});
    for(let half=0;half<1;half++){
     const lo=(half===0?radii[band]:rm)+1.2,hi=radii[band+1]-1.5;
     const edge=(r,a)=>V(r,a0).lerp(V(r,a1),(a-a0)/(a1-a0));let poly=[edge(lo,l),edge(hi,l),edge(hi,h),edge(lo,h)];const center=poly.reduce((s,p)=>s.add(p),new THREE.Vector3()).multiplyScalar(.25);
