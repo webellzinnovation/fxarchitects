@@ -1,6 +1,6 @@
 # FXARCH - F(x) Architects interactive city
 
-Version 0.6.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
+Version 0.9.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
 
 ## Run and deploy
 
@@ -83,3 +83,11 @@ Steam locomotive has boiler bands, chimney, domes, cab/glazing, wheel spokes and
 Verification: `test-outskirts.mjs` checks 1280/390/320 layout, new ambient movement and freeze; `test-rail-v08.mjs` checks all supports, rake metadata, speed profile and 1280/390 visuals. Existing admin/model/compass tests remain. Day/night remains supported.
 
 The metro alignment now has gentle smooth bends in the northern clear corridor. Steam follows two internal curving road corridors joined at the northern/southern road edges, with level-crossing boards and gray crossing pads. Its loop rate is .011 per animation-second, raised from .003 in v0.6. Speeds are visually tuned, not a real km/h simulation. Final sweep: zero pillar-building hits, zero railway samples within 1.5 units of plot centers. Rail samples are a clearance check, not a proof against arbitrary oversized future uploads.
+
+## Revision 0.9: licensed textured trees and soft map edges
+
+Quaternius CommonTree_3 (CC0) replaces faceted crowns with slender branched trunks and textured, muted-green leaf clusters. Derived repeated geometry is 584 triangles per tree: 104 bark and 480 leaf. 512px textures, selected enlarged leaf cards, per-group instancing and frustum culling bound the cost. Geometry reduction runs before deployment, not at page startup. Source: https://poly.pizza/m/QVOop92WmG and public/models/TREE-LICENSE.txt. These are licensed textured low-poly trees, not photogrammetry.
+
+Distance fog blends the outer city into the matching day/night background (48-103 scene units). It is a depth fade, not a screen-space blur. UI and project orbit dialogs remain sharp. Latest theme/persistence and Motion tests pass; 390/320 layouts have no outer overflow. Current rendered city is about 289k triangles/298 calls on headless 390px; physical-phone FPS is not verified. The full admin regression did not finish within the bounded rerun, so its latest complete result remains the earlier v0.6 result.
+
+The masterplan-style grid/courtyard-block rebuild, stations and transport/entourage refinements are subsequent work, not included in this tree drop.
