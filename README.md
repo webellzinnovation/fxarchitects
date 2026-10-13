@@ -1,6 +1,6 @@
 # FXARCH - F(x) Architects interactive city
 
-Version 0.9.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
+Version 0.10.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
 
 ## Run and deploy
 
@@ -17,9 +17,9 @@ Deploy the contents of `dist` to a static host. Vite uses `base: './'`, includin
 
 ## City and controls
 
-49 typed plots: roadside, corner and center-block. Three colored procedural projects are explicitly illustrative demos, not actual firm projects. White context buildings have seven Indian-inspired form families: courtyard/veranda, terraced setback, jaali-like screens, chajja, fins, pavilions and L-shaped massing. Unequal blocks and nonlinear coordinate warping create bending roads; this remains a structured procedural town rather than a surveyed neighborhood.
+49 typed plots retain their identities: roadside, corner and center-block. Three colored procedural projects are explicitly illustrative demos, not actual firm projects. The fourth is a licensed staged villa sample. Dense white courtyard blocks and continuous street walls share a straight connected road grid. A blue linear water edge and planted corridor run through the composition. Village/farms, northern housing and a fishing lake are joined by road connectors. This is an illustrative masterplan, not a surveyed neighborhood.
 
-Green trees, blue river, terracotta cafe umbrellas, capped 12 cars and 24 pedestrians. Motion stops when disabled, a project opens or the document is hidden; reduced-motion preference starts it paused. The north arrow tracks camera bearing. Clicking north preserves target, distance and tilt while turning to north. Orbit, zoom, pan, reset and a city fly-around tour are available. Fly is not first-person navigation.
+Licensed textured trees, blue water, terracotta cafe umbrellas, 16 original procedural road vehicles and 96 licensed photo-cutout figures. Motion stops when disabled, a project opens or the document is hidden; reduced-motion preference starts it paused. The north arrow tracks camera bearing. Clicking north preserves target, distance and tilt while turning to north. Orbit, zoom, pan, reset and a city fly-around tour are available. Fly is not first-person navigation.
 
 Click a colored project or its list entry for details and an independent orbit view. Filters select typed projects. Missing facts and photos are stated, never fabricated. Models are normalized to fit their plot/view, not shown at verified physical scale.
 
@@ -44,7 +44,7 @@ Tests use Playwright and Chrome at `/usr/bin/google-chrome-stable`; adapt that p
 - `node test-interactions.mjs`: direct scene click, orbit and ambient motion pause.
 - `node test-admin.mjs`: photo-only save, reload persistence, exterior/room GLB replacement, room switching, invalid GLB rejection, model removal back to placeholder, deletion and mobile internal overflow. This script expects the test-only reference files in `/downloads`; they are not runtime assets.
 
-Screenshots were visually inspected, including mobile dialog bottom content and 320px admin save/delete controls. No uncaught page errors were seen in layout/admin tests. Local production entry returned HTTP 200. No claim of public deployment is made by this bundle. Headless software WebGL is not a physical-phone performance test. Production JS is about 633 kB (164 kB gzip), primarily Three.js; the build reports a chunk-size warning.
+Screenshots were visually inspected, including mobile dialog bottom content and 320px admin save/delete controls. No uncaught page errors were seen in layout/admin tests. Local production entry returned HTTP 200. No claim of public deployment is made by this bundle. Headless software WebGL is not a physical-phone performance test. Production JS is about 675 kB (178 kB gzip), primarily Three.js; the build reports a chunk-size warning.
 
 Three.js is MIT licensed; see THIRD_PARTY_LICENSES.txt. Dependency licenses remain with their packages.
 
@@ -91,3 +91,20 @@ Quaternius CommonTree_3 (CC0) replaces faceted crowns with slender branched trun
 Distance fog blends the outer city into the matching day/night background (48-103 scene units). It is a depth fade, not a screen-space blur. UI and project orbit dialogs remain sharp. Latest theme/persistence and Motion tests pass; 390/320 layouts have no outer overflow. Current rendered city is about 289k triangles/298 calls on headless 390px; physical-phone FPS is not verified. The full admin regression did not finish within the bounded rerun, so its latest complete result remains the earlier v0.6 result.
 
 The masterplan-style grid/courtyard-block rebuild, stations and transport/entourage refinements are subsequent work, not included in this tree drop.
+
+
+## Revision 0.10: connected courtyard masterplan and urban transport
+
+This revision supersedes the older layout, tree, people and transport descriptions above. A straight connected grid now supports courtyard street walls; northern connector streets stay clear of added housing. The village lane reaches the farm road, and the fishing dock connects to the city road. The urban steam railway uses road corridors and marked crossings.
+
+The median metro has three roofed platforms with access stairs, handrails, sign panels and a four-car train. A modern rounded cab with dark windshield, small headlights, continuous glazing and flush-looking door panels is modeled procedurally. Its 48-second roundtrip has station dwell and eased travel. It is a stylized original model, not an exact replica, engineering design or operational transit simulation. White sign panels are visual details, not a wayfinding system.
+
+Road vehicles include cars, city bus, semi-truck, box truck, van, moped and kick scooter. 96 camera-facing photo-cutouts use five reduced Viz-People figures, with walking/standing variety plus separate original procedural luggage and bicycles. Source: https://www.viz-people.com/portfolio/free-cut-people-v4/ . The source states free commercial use; see public/people/LICENSE.txt for source and edits. These are not CC0. Original images and the user's reference photos are not bundled.
+
+The steam plume uses 64 capped billow-textured particles, rising and growing from historical stack positions. It is intentionally soft and can partially obscure buildings. Distance fog matches day/night and adapts to zoom distance; it is depth fade, not a true blur. All trains, road vehicles, walkers, farm/boat motion and smoke share Motion/reduced-motion behavior.
+
+Verification on the final build: 1280/390/320 layout and Motion tests, metro dwell/cruise, day/night persistence, and visual inspection of map, stations, cab, plume and licensed people. Conservative triangle bounds cover 90,183 context/project/outskirts triangles, all 15 supports and six stair runs, 500 metro deck samples, station platform/roof envelopes and 1,000 steam rail samples with no hits. This excludes foliage and ground, and is not a guarantee against arbitrary future oversized uploads. Current scene is about 352k triangles/500 draw calls on headless desktop and 298k triangles/373 calls at 320px. Physical-phone FPS remains unverified.
+
+Latest admin regression passed photo-only save/reload, exterior/room GLB replacement and removal, room switching, invalid GLB rejection and deletion. That logic regression disables rendering only in its test harness to avoid software-WebGL overhead; delivered rendering is unchanged and checked separately. Local storage still has no account, shared backend or security boundary. No new account, card, paid service or Firebase Blaze was used.
+
+New scripts: test-v10.mjs, test-v10-detail.mjs and test-v10-collision.mjs. Run them individually after building. Test screenshots/results are evidence, not runtime assets. Public deployment is handled separately; these ZIPs do not prove it is live.
