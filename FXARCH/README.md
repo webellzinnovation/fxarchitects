@@ -1,6 +1,6 @@
 # FXARCH - F(x) Architects interactive city
 
-Version 0.12.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
+Version 0.13.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
 
 ## Run and deploy
 
@@ -140,3 +140,10 @@ Later steering in the same v0.12 round lowers context to house-scale (roughly .6
 
 
 Final v0.12 verification: 1280/390/320 layout/Motion no errors/outer overflow; rail dwell/cruise, walkers/vehicles freeze/resume; Auto stage/speed/manual override and manual theme persistence pass. Admin save/reload, GLB replacement/removal, rooms, invalid-file rejection and deletion pass (logic harness only disables rendering, actual scene inspected separately). Actual default overview, top-down, architectural closeup and 390px night pixels inspected. Current scene ~409k triangles/592 calls desktop, ~370k/469 at 390px, ~363k/440 at 320px. JS ~705kB/188kB gzip. Physical-phone FPS unverified; fixed shadow filtering is not photoreal ray tracing. No account, backend, card or paid service added.
+
+
+## Revision 0.13: night plot focus without changing project materials
+
+Supersedes v0.12's emissive project tint. Project base colours, texture maps, emissive colours and emissive intensity now remain unchanged between day and night. A neutral-warm, non-shadow-casting spotlight from an architectural front/side angle lights each visible project and immediate plot. A soft transparent radial ground pool supports the focus; surrounding ambient/sun lighting is darker. Filtered-out projects have no remaining plot light. Day disables all project focus lights/pools. Local uploaded projects participate in the same presentation.
+
+Verified project material signatures are unchanged across the night toggle, four spotlights/four pools exist for the four demos, filtering corner leaves two, and day hides focus lighting. Auto cycle/speed/manual override and theme persistence tests pass. Actual desktop and 390px night pixels inspected: design colour is readable, no orange emissive facade wash, plots form focused light pools against darker context. This is an illustrative architectural night presentation, not proof of actual installed lighting for a project whose model supplies none. Four spotlights add shader work, but no new shadow maps; physical-phone FPS is unverified. Geometry is unchanged from the clear v0.12 collision sweep. No account, backend, card or paid service added.
