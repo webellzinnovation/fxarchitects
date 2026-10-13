@@ -65,3 +65,9 @@ The page and city canvas are fixed to the viewport. Wheel/touch on the scene orb
 White-clay metro viaduct includes pillars, track, train windows/roof details and gentle back-and-forth motion. A white-clay steam engine circles a peripheral railway, with wheels, boiler, cabin, tender and four cheap smoke puffs. Both share the existing Motion toggle and pause/reduced-motion rules. These are procedural demonstrations, not real railway engineering or plans. Rail static geometry is batched; animation counts are capped.
 
 `node test-v06.mjs` checks metro/steam movement, walking limb matrices, Motion freeze, fixed scene bounds and zero page scroll at 1280/390. `node test-sample.mjs` verifies model/images and captures desktop/phone details; `--renders` rebuilds exact-model JPEGs. Test assets are not deployed. Physical-phone performance remains unverified; headless software WebGL screenshots are layout evidence, not a GPU benchmark.
+
+## Revision 0.7: day/night toggle
+
+Sun/moon control switches the city between the original daytime scene and a night scene with dark sky, dim ambient/moon lighting, warm emissive house windows and 40 capped street lamps/pools. Villa glazing responds to night mode too. State is stored in visitor-local localStorage, with graceful fallback when unavailable. The light theme retains the daytime materials and exposure. The UI panels remain light for readability; this is a day/night scene mode, not a fully dark interface skin. Cheap emissive geometry/pools are used rather than dozens of shadow-casting point lights. No bloom claim or physical illumination simulation.
+
+`node test-theme.mjs` verifies persistence on reload, night/day sky changes and captures 1280/390 day/night and night villa. Day, night, and mobile toggle layout were visually inspected. All previous local-admin and model license caveats remain in force.
