@@ -47,3 +47,15 @@ Tests use Playwright and Chrome at `/usr/bin/google-chrome-stable`; adapt that p
 Screenshots were visually inspected, including mobile dialog bottom content and 320px admin save/delete controls. No uncaught page errors were seen in layout/admin tests. Local production entry returned HTTP 200. No claim of public deployment is made by this bundle. Headless software WebGL is not a physical-phone performance test. Production JS is about 633 kB (164 kB gzip), primarily Three.js; the build reports a chunk-size warning.
 
 Three.js is MIT licensed; see THIRD_PARTY_LICENSES.txt. Dependency licenses remain with their packages.
+
+## Revision 0.5: bundled licensed house sample
+
+A fourth colored project, `Suburban house / model sample`, bundles Kenney's City Kit Suburban 2.0 `building-type-e.glb` on a corner plot. This is a third-party demo sample, not F(x) Architects' work. The original palette texture is embedded into the GLB; no external texture request is needed. Self-contained model: 157,344 bytes. Two included JPEGs are actual screenshots of this model rendered by the site's Three.js orbit viewer, not photographs or AI images; together they are about 50 KB. Geometry was not decimated because the complete model is already small. All runtime assets are local and relative-path compatible.
+
+License verified October 13, 2026 on creator's source page and creator's itch page, and corroborated by the included License.txt: CC0 1.0 Universal. Attribution is retained in project description, source link and `public/models/KENNEY-LICENSE.txt`.
+
+- Source: https://kenney.nl/assets/city-kit-suburban
+- Creator license statement: https://kenney-assets.itch.io/city-kit-suburban
+- Download: https://kenney.nl/media/pages/assets/city-kit-suburban/2c871b7af2-1745479373/kenney_city-kit-suburban_20.zip
+
+`node test-sample.mjs` verifies bundled model rendering, two images, no page errors and phone dialog overflow. `--renders` regenerates the two JPEGs from the model. If an earlier device-local project used the newly occupied plot, it is retained and moved to another available plot of its same type on sync, then saved locally. All earlier local limitations still apply.
