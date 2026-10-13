@@ -1,6 +1,6 @@
 # FXARCH - F(x) Architects interactive city
 
-Version 0.14.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
+Version 0.15.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
 
 ## Run and deploy
 
@@ -15,13 +15,17 @@ npm run preview
 
 Deploy the contents of `dist` to a static host. Vite uses `base: './'`, including for GitHub Pages project subpaths. Source belongs on `main`; the built files can be served from `gh-pages`. No credentials, environment variables, accounts, backend, runtime CDN, external fonts, billing or card are required. Do not attach Firebase billing or upgrade to Blaze.
 
-## City and controls
+## Current city: v0.15 radial masterplan
 
-49 typed plots retain their identities: roadside, corner and center-block. Three colored procedural projects are explicitly illustrative demos, not actual firm projects. The fourth is a licensed staged villa sample. Detailed white low-rise buildings follow irregular parcels and straight street segments meeting at varied angles. An outer polygonal ring, five outward approaches and three small roundabout islands suggest a wider city. The dense core thins in the northern edge row. A gently winding blue river edge, planted walk and two pedestrian bridges frame the city. The macro reference is interpreted, not traced: the core remains an irregular connected parcel network, not a full radial redevelopment; the river stays at the edge rather than cutting through project plots. Village/farms, northern housing and a fishing lake are joined by road connectors. This is an illustrative masterplan, not a surveyed neighborhood.
+The v0.14 perimeter accent was replaced. The supplied aerial now informs the underlying skeleton: twelve outward arterials, four irregular polygonal rings, roundabouts at major junctions, a winding river through the central fabric and bridges across it. Local straight segments divide radial wedges. Dense low-rise small buildings fill inner wedges; larger pitches and gaps thin the outer fabric. The six demos are relocated to mixed typed parcels, with a reserved clear envelope around each. This interprets the aerial's skeleton, not a surveyed copy of Coimbatore. The former village/lake arrangement is superseded by this city.
 
-Licensed textured trees, blue water, terracotta cafe umbrellas, 16 original procedural road vehicles and 96 original articulated 3D figures. Motion stops when disabled, a project opens or the document is hidden; reduced-motion preference starts it paused. The north arrow tracks camera bearing. Clicking north preserves target, distance and tilt while turning to north. Orbit, zoom, pan, reset and a city fly-around tour are available. Fly is not first-person navigation.
+The metro follows a diagonal radial corridor; steam rail runs outside the outer ring. Project parcel tests inspect full polygons against all 52 road corridors and both rail paths. All six demos report zero overlap, and their rendered mesh vertices stay inside the assigned polygons, including the staged villa base. Building/support/stair/deck and steam-route sampling reports no hits. These numerical checks are sampled and conservatively bounded, not a mathematical proof for arbitrary uploads.
 
-Click a colored project or its list entry for an editorial project board: viewer above, off-white caption sheet below, large project number, title, ruled metadata and plain photo area. The visible Day/Night button starts in the current city mode and then relights the project independently. Original project colors, maps and emissive settings are retained; night uses a neutral spotlight and soft light pool, not a color wash. Tree leaves use a brighter natural green texture with a small stable green emissive lift for readable night silhouettes. Filters select typed projects. Missing facts and photos are stated, never fabricated. Models are normalized to fit their plot/view, not shown at verified physical scale.
+Scale convention: 1 scene unit represents 5 metres. Adult people are around 1.7 m; car length about 4.3 m including lights; bus around 9 m; context houses about 3-5 m high; larger street trees around 8 m before instance variation; local lanes 3.1 m, rings 6.25-11 m, main arterials 9-12.5 m, river about 24 m wide. Procedural project height is reduced to comparable house-scale. Uploaded GLBs use uniform scaling capped by 65% of the available parcel's width/depth and 9 m roadside/corner or 12 m center-block height; native file units are not trusted. Arbitrary GLB proportions are preserved, not inferred as a measured architecture model. Trains are illustrative silhouettes, not dimension-verified replicas; no survey-accurate city claim is made.
+
+Night focus, natural green trees, editorial viewer-first board and the independent project Day/Night toggle remain. Courtyard house now has original procedural furnished living-room, bedroom and kitchen cutaway studies. These are explicitly illustrative room studies, not verified interiors of the exterior demo. Switch rooms or return to Exterior in the caption controls; room selection scrolls back to the viewer. This is orbit view, not continuous first-person walkthrough.
+
+Controls: orbit/pan/zoom, north, Whole map, River corridor, Outer fabric, Fly, Motion, speed and automatic day/evening/night. Filters select typed projects. Missing facts/photos stay stated. No fake firm projects or real-world portfolio claims.
 
 ## Device-local admin demo
 
@@ -157,3 +161,19 @@ The project dialog is now a vertical editorial board, with the 3D viewer on top 
 Validation: desktop/390/320 dialog mode inheritance and independent switching, bundled sample loading, no page errors/overflow; device-local admin create, reload, model replacement, invalid GLB rejection, photo-only room and deletion; motion freeze/resume, metro dwell/cruise and speed; unchanged project material signatures across city themes; four focus lights/pools with two after corner filtering; 57,907 context-building triangle bounds and 21 supports/stairs checked with no building/support, rail or deck hits. Outer ring and edge bridges were visually inspected. These checks are not a geometric guarantee for arbitrary uploaded assets. Physical phone frame rate remains unmeasured.
 
 The source ZIP omits dependencies and generated builds; run npm ci and npm run build. The distribution ZIP contains built site files at its root, ready for a static-host deployment.
+
+### v0.15 final checks
+
+Production build passed. Full-parcel sampling against all road corridors and metro/steam routes returned zero hits for six demos, with zero project mesh vertices outside their parcels. Building triangles and 21 rail support/stair objects returned no collision hits. Motion checks covered people, vehicles, metro cruise/dwell and pause. Day/night tests kept project materials unchanged and checked independent viewer lighting. City/dialog checks at 1280, 390 and 320 px found no overflow or browser errors. Admin create/reload/model replacement/room upload/photo-only fallback/invalid GLB/delete checks passed. Furnished room cutaways and street-level ratios were visually inspected. These are desktop Chrome checks, not physical-phone performance measurements.
+
+Existing device-local projects from older layouts are automatically reassigned to an available matching typed parcel if their former plot no longer exists. Their identity and content remain, but map location can change. Back up local uploads before changing versions; the demo has no cloud backup.
+
+### Added OBJ samples
+
+Modern rustic villa: ArchNovaStudio on CGTrader, https://www.cgtrader.com/free-3d-models/exterior/house/modern-rustic-villa-luxury-countryside-house-3d-model . User-supplied Royalty Free asset, no AI training. Only the OBJ was supplied; villa.mtl and textures are missing. Two distant flat ground triangles were removed so the villa itself, not a 96 m stray plane, determines its footprint. Original villa envelope is about 11 x 17.55 x 8.56 m. Optimized GLB is 60,025 triangles in two material draws, 1.10 MB. Neutral replacement materials are intentional and labeled.
+
+Uploaded architecture: source/name/creator not yet supplied. OBJ declares metre units, with 34.49 x 36.73 x 27.01 m bounds. Untitled.mtl and textures are missing. GLB is reduced from 315,495 to 59,938 triangles, one draw, 1.55 MB. Its labeled neutral finish is not the original material appearance.
+
+Both demos are uniformly fitted to the assigned parcel and capped at 10 m display height, preserving proportions. This can reduce an original model's size; it is a plot-fit study, not a survey replica. Conversion script is convert-obj-demo.mjs; raw OBJ inputs are intentionally not bundled. Geometry simplification keeps a low relative error, but physical-phone FPS remains unmeasured.
+
+Final admin regression disables background city rendering during data/form checks to keep software-rendered browser tests responsive. Visual and motion tests use rendering enabled.

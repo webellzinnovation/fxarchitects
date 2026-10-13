@@ -1,0 +1,22 @@
+{
+  "peopleMove": true,
+  "vehiclesMove": true,
+  "metroDwell": true,
+  "metroCruise": true,
+  "time": 0.30000000000000004,
+  "frozen": true,
+  "widths": [
+    {
+      "w": 1280,
+      "overflow": false
+    },
+    {
+      "w": 390,
+      "overflow": false
+    },
+    {
+      "w": 320,
+      "overflow": false
+    }
+  ]
+}

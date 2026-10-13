@@ -19,3 +19,13 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+MODERN RUSTIC VILLA
+User-supplied OBJ from CGTrader by ArchNovaStudio.
+Source: https://www.cgtrader.com/free-3d-models/exterior/house/modern-rustic-villa-luxury-countryside-house-3d-model
+Royalty Free license supplied by user context. No AI training.
+Converted, simplified, neutral material replacement; referenced MTL/textures not supplied.
+
+UPLOADED ARCHITECTURE SAMPLE
+User supplied project-model-2.obj to include as a demo. Name/creator/source not yet supplied. No creator is invented.
+Converted, simplified, neutral material replacement; referenced Untitled.mtl/textures not supplied.
