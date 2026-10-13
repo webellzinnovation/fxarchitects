@@ -1,6 +1,6 @@
 # FXARCH - F(x) Architects interactive city
 
-Version 0.10.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
+Version 0.11.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
 
 ## Run and deploy
 
@@ -19,7 +19,7 @@ Deploy the contents of `dist` to a static host. Vite uses `base: './'`, includin
 
 49 typed plots retain their identities: roadside, corner and center-block. Three colored procedural projects are explicitly illustrative demos, not actual firm projects. The fourth is a licensed staged villa sample. Dense white courtyard blocks and continuous street walls share a straight connected road grid. A blue linear water edge and planted corridor run through the composition. Village/farms, northern housing and a fishing lake are joined by road connectors. This is an illustrative masterplan, not a surveyed neighborhood.
 
-Licensed textured trees, blue water, terracotta cafe umbrellas, 16 original procedural road vehicles and 96 licensed photo-cutout figures. Motion stops when disabled, a project opens or the document is hidden; reduced-motion preference starts it paused. The north arrow tracks camera bearing. Clicking north preserves target, distance and tilt while turning to north. Orbit, zoom, pan, reset and a city fly-around tour are available. Fly is not first-person navigation.
+Licensed textured trees, blue water, terracotta cafe umbrellas, 16 original procedural road vehicles and 96 original articulated 3D figures. Motion stops when disabled, a project opens or the document is hidden; reduced-motion preference starts it paused. The north arrow tracks camera bearing. Clicking north preserves target, distance and tilt while turning to north. Orbit, zoom, pan, reset and a city fly-around tour are available. Fly is not first-person navigation.
 
 Click a colored project or its list entry for details and an independent orbit view. Filters select typed projects. Missing facts and photos are stated, never fabricated. Models are normalized to fit their plot/view, not shown at verified physical scale.
 
@@ -44,7 +44,7 @@ Tests use Playwright and Chrome at `/usr/bin/google-chrome-stable`; adapt that p
 - `node test-interactions.mjs`: direct scene click, orbit and ambient motion pause.
 - `node test-admin.mjs`: photo-only save, reload persistence, exterior/room GLB replacement, room switching, invalid GLB rejection, model removal back to placeholder, deletion and mobile internal overflow. This script expects the test-only reference files in `/downloads`; they are not runtime assets.
 
-Screenshots were visually inspected, including mobile dialog bottom content and 320px admin save/delete controls. No uncaught page errors were seen in layout/admin tests. Local production entry returned HTTP 200. No claim of public deployment is made by this bundle. Headless software WebGL is not a physical-phone performance test. Production JS is about 675 kB (178 kB gzip), primarily Three.js; the build reports a chunk-size warning.
+Screenshots were visually inspected, including mobile dialog bottom content and 320px admin save/delete controls. No uncaught page errors were seen in layout/admin tests. Local production entry returned HTTP 200. No claim of public deployment is made by this bundle. Headless software WebGL is not a physical-phone performance test. Production JS is about 702 kB (187 kB gzip), primarily Three.js; the build reports a chunk-size warning.
 
 Three.js is MIT licensed; see THIRD_PARTY_LICENSES.txt. Dependency licenses remain with their packages.
 
@@ -93,13 +93,13 @@ Distance fog blends the outer city into the matching day/night background (48-10
 The masterplan-style grid/courtyard-block rebuild, stations and transport/entourage refinements are subsequent work, not included in this tree drop.
 
 
-## Revision 0.10: connected courtyard masterplan and urban transport
+## Historical revision 0.10 (superseded by 0.11): connected courtyard masterplan and urban transport
 
 This revision supersedes the older layout, tree, people and transport descriptions above. A straight connected grid now supports courtyard street walls; northern connector streets stay clear of added housing. The village lane reaches the farm road, and the fishing dock connects to the city road. The urban steam railway uses road corridors and marked crossings.
 
 The median metro has three roofed platforms with access stairs, handrails, sign panels and a four-car train. A modern rounded cab with dark windshield, small headlights, continuous glazing and flush-looking door panels is modeled procedurally. Its 48-second roundtrip has station dwell and eased travel. It is a stylized original model, not an exact replica, engineering design or operational transit simulation. White sign panels are visual details, not a wayfinding system.
 
-Road vehicles include cars, city bus, semi-truck, box truck, van, moped and kick scooter. 96 camera-facing photo-cutouts use five reduced Viz-People figures, with walking/standing variety plus separate original procedural luggage and bicycles. Source: https://www.viz-people.com/portfolio/free-cut-people-v4/ . The source states free commercial use; see public/people/LICENSE.txt for source and edits. These are not CC0. Original images and the user's reference photos are not bundled.
+Road vehicles include cars, city bus, semi-truck, box truck, van, moped and kick scooter. 96 camera-facing photo-cutouts use five reduced Viz-People figures, with walking/standing variety plus separate original procedural luggage and bicycles. Source: https://www.viz-people.com/portfolio/free-cut-people-v4/ . The source states free commercial use. These were not CC0 and have been removed in v0.11. Original images and the user's reference photos are not bundled.
 
 The steam plume uses 64 capped billow-textured particles, rising and growing from historical stack positions. It is intentionally soft and can partially obscure buildings. Distance fog matches day/night and adapts to zoom distance; it is depth fade, not a true blur. All trains, road vehicles, walkers, farm/boat motion and smoke share Motion/reduced-motion behavior.
 
@@ -108,3 +108,18 @@ Verification on the final build: 1280/390/320 layout and Motion tests, metro dwe
 Latest admin regression passed photo-only save/reload, exterior/room GLB replacement and removal, room switching, invalid GLB rejection and deletion. That logic regression disables rendering only in its test harness to avoid software-WebGL overhead; delivered rendering is unchanged and checked separately. Local storage still has no account, shared backend or security boundary. No new account, card, paid service or Firebase Blaze was used.
 
 New scripts: test-v10.mjs, test-v10-detail.mjs and test-v10-collision.mjs. Run them individually after building. Test screenshots/results are evidence, not runtime assets. Public deployment is handled separately; these ZIPs do not prove it is live.
+
+
+## Revision 0.11: varied urban fabric, 3D entourage and motion controls
+
+This revision supersedes v0.10's identical courtyard footprints and all photo-cutout people. Unequal road intervals make small, elongated and larger parcels while keeping the metro/steam rail axes. Closed courtyards, U courtyards and linear pairs are mixed. Each block is split into individual height parcels: about .95-5.85 scene units, averaging 3.82 along avenues versus 1.96 inside. White setbacks, stepped tops, parapets, penthouses and occasional pitched roofs vary the skyline. All four demo project IDs and plot positions remain stable in their logical plots, though physical plot coordinates adapt to the new road intervals. This interprets the reference's varied fabric, not its exact diagonal masterplan or surveyed geometry.
+
+The 96 people are original instanced 3D geometry, no billboards or photographs. Neutral clothing palettes, varied heights including shorter figures, skirt/trouser silhouettes, hair, bags, backpacks and bent-arm poses provide variety. Most walk with articulated arms/legs; a small subset stands. These remain stylized architectural scale figures, not photoreal characters. Photo assets and their license are removed from this drop.
+
+The 16 original road vehicles now use shaped/sloped profiles, rounded bodies, window shapes, headlights/tail lamps, mirrors, wheel rims, bus doors and roof equipment. Sedan, hatchback, bus, semi-truck, box truck, van, moped and kick scooter retain a dark scheme. These are closer to the reference's silhouettes but are not exact copies. No auto-rickshaw is included.
+
+Metro speed is 1.7 times its earlier rate (about 28 seconds for a roundtrip at 1x); road vehicles are 1.65 times faster. City speed cycles 1x, 2x, 4x, .5x. It scales walkers, trains, road vehicles, smoke, farm/boat motion and the fly-around tour. Motion and reduced-motion still pause animation. Speeds are visual, not physical km/h.
+
+Auto mode cycles day, evening, night at 60-second boundaries with an eight-second sky/light transition into each state. It uses real visible time, independent of city speed, and pauses while Motion is off, the project dialog is open or the page is hidden. Auto starts off under reduced-motion preference. Manual Day/Night disables Auto; the Auto button re-enables it. Manual theme choice persists; Auto/speed settings are session-only. Window glow switches with the night phase while sky and scene lighting blend.
+
+Final collision coverage: 160,603 non-ground/non-foliage context/project/outskirts triangle bounds, 15 supports/six stair runs, station deck/roof envelopes, 500 metro deck samples and 1,000 steam samples: no hits. Layout/Motion tests have no errors or outer overflow at 1280/390/320; moving walkers and road vehicles freeze correctly. Cycle tests verify evening/night/day, speed and manual override. Full admin logic regression and separate actual rendering inspection pass. Current headless scene: about 507k triangles/521 calls desktop, 459k/428 at 390px and 434k/393 at 320px. Physical-phone FPS is unverified and the extra geometry may cost more on weaker devices. No backend, account, card, billing or Firebase Blaze was added.
