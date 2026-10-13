@@ -1,0 +1,5 @@
+Tree by Quaternius, CommonTree_3. Public Domain CC0 1.0 Universal.
+Source: https://poly.pizza/m/QVOop92WmG
+Author: https://quaternius.com/
+License: https://creativecommons.org/publicdomain/zero/1.0/
+Original model preview and source license inspected October13,2026. Geometry extracted from original GLB, selected canopy cards enlarged, bark simplified offline; textures reduced to512px, metallic removed, foliage muted. Repeated with instancing. Derived assets are not F(x) Architects work.
