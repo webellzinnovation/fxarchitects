@@ -13,3 +13,24 @@ html,body,#app{height:100%;overflow:hidden;overscroll-behavior:none}.workspace{h
 .map-visits{position:absolute;top:76px;left:30px;display:flex;gap:6px}.map-visits button{min-height:44px;padding:0 11px;border:1px solid #cfd5c7;border-radius:3px;background:#fafbf5e8;font-size:10px}.map-visits button[aria-pressed="true"]{background:#2f3b2c;color:white}@media(max-width:760px){.map-visits{left:20px;top:64px;gap:4px}.map-visits button{padding:0 8px;font-size:9px}}
 
 .tools{flex-wrap:wrap;justify-content:flex-end;max-width:100%}@media(max-width:760px){.tools{justify-content:flex-start}.tools .tool{min-width:44px}#city-speed,#auto-cycle{padding:0 8px}}
+
+/* Project portfolio board: viewer first, paper caption below. */
+#project-dialog{width:min(1060px,calc(100% - 32px));background:#f8f7f2;border:1px solid #363a33;border-radius:0;max-height:94dvh}
+#project-dialog .modal-head{padding:12px 28px;border-bottom:1px solid #363a33;gap:12px;background:#f8f7f2}
+#project-dialog .modal-head .eyebrow{margin-right:auto;letter-spacing:1.9px}
+#project-dialog .modal-head .close{border:0;font-size:26px}
+#project-dialog .modal-grid{display:flex;flex-direction:column}
+#project-dialog .model-view{height:440px;flex:none;border-bottom:1px solid #363a33}
+#project-dialog .details{padding:36px 48px 44px;position:relative;overflow:visible;background:#f8f7f2}
+#project-dialog .board-number{font-family:Georgia,serif;font-size:64px;line-height:1;float:right;margin-left:20px;font-weight:400;color:#394137}
+#project-dialog .details h2{font-family:Georgia,'Times New Roman',serif;font-size:42px;font-weight:400;line-height:1.12;letter-spacing:-1px;margin:12px 0 22px}
+#project-dialog .demo-badge{padding:0;border:0;background:none;letter-spacing:1.6px;font-size:9px;color:#697062}
+#project-dialog .details p{font-size:13px;line-height:1.8;max-width:740px;color:#535d4e}
+#project-dialog .facts{grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid #424a3c;border-bottom:1px solid #424a3c;padding:20px 0;margin:26px 0;gap:20px}
+#project-dialog .facts span{letter-spacing:1.5px;font-size:9px;color:#68715f}
+#project-dialog .facts strong{font-size:12px;line-height:1.5}
+#project-dialog .photo-empty{border:0;border-top:1px solid #c7cabb;padding:16px 0}
+#project-dialog .view-note{color:#58654d;background:#f8f7f2d9;padding:6px 10px;bottom:14px}
+#project-dialog.viewer-night .view-note{color:#eeeede;background:#17222ddb}
+#viewer-theme{border-radius:0;border-color:#777f6f;min-width:95px}
+@media(max-width:760px){#project-dialog{width:calc(100% - 16px)}#project-dialog .modal-head{padding:10px 12px;gap:6px}#project-dialog .modal-head .eyebrow{font-size:8px;letter-spacing:1px}#project-dialog .model-view{height:300px}#project-dialog .details{padding:24px 22px 32px}#project-dialog .details h2{font-size:30px}#project-dialog .board-number{font-size:48px}#project-dialog .facts{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 14px}#viewer-theme{padding:0 10px;min-width:84px}}

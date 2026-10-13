@@ -23,7 +23,7 @@ export function installOutskirts(scene){
  box(staticG,-26,-.015,13,22,.045,.75,road);box(staticG,-20,-.015,20,.75,.045,14,road);box(staticG,-29,-.06,27,19,.08,.35,blue);
  // Northern edge is an added low-rise neighborhood rather than stretched existing plots.
  box(staticG,0,-.09,-30,78,.05,20,roof);
- const urban=[];for(let row=0;row<3;row++){const z=-27-row*5;box(staticG,0,-.03,z+1.8,77,.05,1.05,road);for(let col=0;col<21;col++){const x=-36+col*3.55;if(![-16,-4,3,16].some(roadX=>Math.abs(x-roadX)<2.4))urban.push({x,z});}}for(const x of [-38,-16,-4,3,16,38])box(staticG,x,-.025,-30,1.05,.05,21,road);
+ const urban=[];for(let row=0;row<3;row++){const z=-27-row*5;box(staticG,0,-.03,z+1.8,77,.05,1.05,road);for(let col=0;col<21;col++){const x=-36+col*3.55;if(!(row===2&&col%3===1)&&![-16,-4,3,16].some(roadX=>Math.abs(x-roadX)<2.4))urban.push({x,z});}}for(const x of [-38,-16,-4,3,16,38])box(staticG,x,-.025,-30,1.05,.05,21,road);
  for(let i=0;i<urban.length;i++){const {x,z}=urban[i],h=.7+(i%4)*.12,w=3.50;box(staticG,x,h/2,z,w,h,3.4);box(staticG,x,h+.075,z,w+.08,.15,3.5,roof);if(i%3===0){box(staticG,x-.4,h+.24,z-.25,1.05,.3,1.1);box(staticG,x-.4,h+.42,z-.25,1.22,.08,1.28,roof);}for(let k=0;k<3;k++)box(staticG,x-.65+k*.65,.53,z+1.71,.25,.3,.025,window);if(i%4===0)lowPolyTree(staticG,x+1.38,z+.9,1.25,i%3);}
  for(const x of [-16,-4,3,16])box(staticG,x,-.03,-23.5,1.05,.055,4,road);box(staticG,25,-.025,3,6,.055,1.1,road);box(staticG,26.5,-.025,3.5,1.1,.055,2,road);box(staticG,-25,-.03,3,6,.055,.7,road);box(staticG,-21,-.03,16,2,.055,.75,road);
  // Lake and fishing edge, kept outside railway and city plots.

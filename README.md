@@ -1,6 +1,6 @@
 # FXARCH - F(x) Architects interactive city
 
-Version 0.13.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
+Version 0.14.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
 
 ## Run and deploy
 
@@ -17,11 +17,11 @@ Deploy the contents of `dist` to a static host. Vite uses `base: './'`, includin
 
 ## City and controls
 
-49 typed plots retain their identities: roadside, corner and center-block. Three colored procedural projects are explicitly illustrative demos, not actual firm projects. The fourth is a licensed staged villa sample. Dense white courtyard blocks and continuous street walls share a straight connected road grid. A blue linear water edge and planted corridor run through the composition. Village/farms, northern housing and a fishing lake are joined by road connectors. This is an illustrative masterplan, not a surveyed neighborhood.
+49 typed plots retain their identities: roadside, corner and center-block. Three colored procedural projects are explicitly illustrative demos, not actual firm projects. The fourth is a licensed staged villa sample. Detailed white low-rise buildings follow irregular parcels and straight street segments meeting at varied angles. An outer polygonal ring, five outward approaches and three small roundabout islands suggest a wider city. The dense core thins in the northern edge row. A gently winding blue river edge, planted walk and two pedestrian bridges frame the city. The macro reference is interpreted, not traced: the core remains an irregular connected parcel network, not a full radial redevelopment; the river stays at the edge rather than cutting through project plots. Village/farms, northern housing and a fishing lake are joined by road connectors. This is an illustrative masterplan, not a surveyed neighborhood.
 
 Licensed textured trees, blue water, terracotta cafe umbrellas, 16 original procedural road vehicles and 96 original articulated 3D figures. Motion stops when disabled, a project opens or the document is hidden; reduced-motion preference starts it paused. The north arrow tracks camera bearing. Clicking north preserves target, distance and tilt while turning to north. Orbit, zoom, pan, reset and a city fly-around tour are available. Fly is not first-person navigation.
 
-Click a colored project or its list entry for details and an independent orbit view. Filters select typed projects. Missing facts and photos are stated, never fabricated. Models are normalized to fit their plot/view, not shown at verified physical scale.
+Click a colored project or its list entry for an editorial project board: viewer above, off-white caption sheet below, large project number, title, ruled metadata and plain photo area. The visible Day/Night button starts in the current city mode and then relights the project independently. Original project colors, maps and emissive settings are retained; night uses a neutral spotlight and soft light pool, not a color wash. Tree leaves use a brighter natural green texture with a small stable green emissive lift for readable night silhouettes. Filters select typed projects. Missing facts and photos are stated, never fabricated. Models are normalized to fit their plot/view, not shown at verified physical scale.
 
 ## Device-local admin demo
 
@@ -147,3 +147,13 @@ Final v0.12 verification: 1280/390/320 layout/Motion no errors/outer overflow; r
 Supersedes v0.12's emissive project tint. Project base colours, texture maps, emissive colours and emissive intensity now remain unchanged between day and night. A neutral-warm, non-shadow-casting spotlight from an architectural front/side angle lights each visible project and immediate plot. A soft transparent radial ground pool supports the focus; surrounding ambient/sun lighting is darker. Filtered-out projects have no remaining plot light. Day disables all project focus lights/pools. Local uploaded projects participate in the same presentation.
 
 Verified project material signatures are unchanged across the night toggle, four spotlights/four pools exist for the four demos, filtering corner leaves two, and day hides focus lighting. Auto cycle/speed/manual override and theme persistence tests pass. Actual desktop and 390px night pixels inspected: design colour is readable, no orange emissive facade wash, plots form focused light pools against darker context. This is an illustrative architectural night presentation, not proof of actual installed lighting for a project whose model supplies none. Four spotlights add shader work, but no new shadow maps; physical-phone FPS is unverified. Geometry is unchanged from the clear v0.12 collision sweep. No account, backend, card or paid service added.
+
+## Revision 0.14: project board, straight street geometry and wider-city language
+
+This revision supersedes earlier grid/curved-road descriptions. Street polylines have seven straight segments between shared displaced intersection nodes. Context mesh envelopes follow those irregular parcel edges. Existing metro axis and stations are retained. An outer polygonal ring, outward approaches and small roundabout islands suggest a wider road system; they are not a full radial core. The gently bending river stays at the edge, with two pedestrian bridges, rather than cutting across project plots. Northern outer-row housing is thinner. Brightened leaf texture and a modest stable green emissive contribution retain readable green tree silhouettes at night.
+
+The project dialog is now a vertical editorial board, with the 3D viewer on top and caption below. Its own visible Day/Night button inherits city mode on opening, then stays independent. Neutral spot lighting and a soft light pool preserve project material colors/maps/emissive values. This is illustrative presentation lighting, not a claim about installed lighting.
+
+Validation: desktop/390/320 dialog mode inheritance and independent switching, bundled sample loading, no page errors/overflow; device-local admin create, reload, model replacement, invalid GLB rejection, photo-only room and deletion; motion freeze/resume, metro dwell/cruise and speed; unchanged project material signatures across city themes; four focus lights/pools with two after corner filtering; 57,907 context-building triangle bounds and 21 supports/stairs checked with no building/support, rail or deck hits. Outer ring and edge bridges were visually inspected. These checks are not a geometric guarantee for arbitrary uploaded assets. Physical phone frame rate remains unmeasured.
+
+The source ZIP omits dependencies and generated builds; run npm ci and npm run build. The distribution ZIP contains built site files at its root, ready for a static-host deployment.
