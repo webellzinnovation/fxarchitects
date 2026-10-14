@@ -215,3 +215,6 @@ Removed the City as a canvas heading/subtitle and the Village & farms / Fishing 
 
 ## v0.20.3
 Project focus now approaches the road-facing front of each bundled/procedural model, rather than a fixed world direction. The three imported entrance faces were checked from source-axis renders. Bundled detail viewers also start at the verified front. Geometry and plot scale are unchanged; the staged-villa original-size question remains pending. Verification is in `verification/v203/`.
+
+## v0.20.4
+The focus-view Open project button follows the selected model's projected top edge with a 14px gap. The camera aims slightly higher to leave button space above larger models on phones. Entrance direction, scale and plot geometry are unchanged. See `verification/v204/`.

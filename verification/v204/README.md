@@ -1,0 +1,5 @@
+# v0.20.4 unobstructed Open project
+
+Open project now sits 14 CSS pixels above the conservative projected bounding box of the selected model, with the button's bottom anchored above the roof instead of its centre on the facade. Bounds are refreshed when loading replaces the model. The camera's look target is raised from 0.45 to 0.8 city units so larger models also leave space for the button on phones. The entrance-facing bearing and distance are retained. No geometry, scale, plot, material, rail or collision changes.
+
+All six desktop selections passed: button bottom at least 14 pixels above projected model top; front alignment >0.999; no popup until Open. 390x844 mobile checks covered staged villa, rustic, terrace, courtyard, and Irada (the latter before only the vertical framing adjustment). Actual screenshots were inspected for the staged and largest rustic views. Open continues to open the existing project popup. Older folders contain historical checks, not new reruns. Staged scale decision remains pending.

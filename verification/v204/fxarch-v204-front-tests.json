@@ -1,0 +1,27 @@
+{
+  "0": {
+    "id": "kenney-house",
+    "buttonRoofGap": 14.009555373107105,
+    "buttonTop": 379.546875,
+    "angle": 1.5077562184067743,
+    "frontAlignment": 0.9999106206307778,
+    "popupClosed": true
+  },
+  "1": {
+    "id": "rustic-villa",
+    "buttonRoofGap": 14.002555159317524,
+    "buttonTop": 163.734375,
+    "angle": 3.017123409453722,
+    "frontAlignment": 0.9992197158608674,
+    "popupClosed": true
+  },
+  "2": {
+    "id": "uploaded-architecture",
+    "buttonRoofGap": 14.002192573171612,
+    "buttonTop": 302.328125,
+    "angle": -0.0701377942404615,
+    "frontAlignment": 0.9999471715394879,
+    "popupClosed": true
+  },
+  "debugById": true
+}

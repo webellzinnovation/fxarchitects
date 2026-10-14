@@ -1,0 +1,27 @@
+{
+  "0": {
+    "id": "courtyard",
+    "buttonRoofGap": 14.01236247357889,
+    "buttonTop": 258.09375,
+    "angle": -1.4602417530608458,
+    "frontAlignment": 0.9999659829355712,
+    "popupClosed": true
+  },
+  "1": {
+    "id": "terrace",
+    "buttonRoofGap": 14.006282265733262,
+    "buttonTop": 219.4375,
+    "angle": 1.6757056083690043,
+    "frontAlignment": 0.9998678239802347,
+    "popupClosed": true
+  },
+  "2": {
+    "id": "commons",
+    "buttonRoofGap": 14.01058815784262,
+    "buttonTop": 371.625,
+    "angle": 3.0729481310921423,
+    "frontAlignment": 0.9990783331009614,
+    "popupClosed": true
+  },
+  "debugById": true
+}

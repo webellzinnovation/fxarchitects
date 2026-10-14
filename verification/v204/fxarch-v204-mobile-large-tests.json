@@ -1,0 +1,27 @@
+{
+  "0": {
+    "id": "rustic-villa",
+    "buttonRoofGap": 14.006955670419302,
+    "buttonTop": 87.890625,
+    "angle": 3.017123409453722,
+    "frontAlignment": 0.9999750976666844,
+    "popupClosed": true
+  },
+  "1": {
+    "id": "terrace",
+    "buttonRoofGap": 14.001492768069568,
+    "buttonTop": 101.953125,
+    "angle": 1.6757056083690043,
+    "frontAlignment": 0.9995000625695847,
+    "popupClosed": true
+  },
+  "2": {
+    "id": "courtyard",
+    "buttonRoofGap": 14.006884464649318,
+    "buttonTop": 123.765625,
+    "angle": -1.4602417530608458,
+    "frontAlignment": 0.999607049808572,
+    "popupClosed": true
+  },
+  "debugById": true
+}
