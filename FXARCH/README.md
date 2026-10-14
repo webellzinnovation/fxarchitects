@@ -1,6 +1,6 @@
 # FXARCH - F(x) Architects interactive city
 
-Version 0.16.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
+Version 0.17.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
 
 ## Run and deploy
 
@@ -192,4 +192,12 @@ Final checks: six project polygons/mesh vertices clear of 52 road corridors and 
 
 v0.16 trees use four selected species (01/04/07/11) from the user-supplied CGTrader Low Poly Trees Mega Pack (item 3304599), not the previous Quaternius tree. They share one 512px colour atlas and are instanced per species/parent. Reduced planting counts remain. Designer name is pending. The source FBX and archive are not bundled in deployment; only selected geometry and atlas are served.
 
-The district-realism fabric pass is still pending after v0.16. Front-facing houses and road joins are fixed, but v0.16 still repeats low-rise house forms. The planned next pass varies heights, footprints, roofs and setbacks, keeps the original road/river skeleton, and does not import Kusatsu geometry.
+## v0.17 old-style fabric with targeted fixes
+
+At the user's request, the dense mixed-building experiment was dropped. The lighter v0.16 context fabric is restored exactly: 871 context houses with the same footprints, positions and planting. Original radial roads, rings, roundabouts and river remain unchanged. No Kusatsu geometry is imported.
+
+All six demo buildings now orient their entrance side toward the nearest street. Rustic villa's visible timber gate, staged villa's front door/steps, Courtyard's courtyard entry and Commons' colonnade face the road. Terrace's primary elevation and IradaGurbanova's entrance-step side are aligned too. Models are uniformly re-fitted after rotation so their corners remain inside the project parcel. Debug openProject accepts a project ID or object.
+
+Day exposure is 1.3 (was 1.15), hemisphere light 2.1 (was 1.8), sun 3.4 (was 3.0). Project night spotlights are stronger but original texture/colour materials are retained. Viewer theme remains independent.
+
+Walk uses conservative pedestrian collision proxies, spatially indexed for static objects: context houses, project geometry, tree trunks, rail supports/stairs, moving vehicles and steam carriages, and people. River and world edge block movement; ground stays at fixed eye height. Elevated metro is overhead. Dynamic boxes are intentionally conservative. Models and local admin changes refresh collision proxies. This is not a rigid-body simulation: no gravity-driven jumping, vehicle impacts, movable buildings, interior navigation mesh or simulated buoyancy. Mobile FPS remains unverified on a physical device.

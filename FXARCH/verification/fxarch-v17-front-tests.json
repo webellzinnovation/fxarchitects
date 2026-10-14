@@ -1,0 +1,45 @@
+{
+  "0": {
+    "id": "courtyard",
+    "angle": 0.8015926535897933,
+    "roadX": -22.021011821452127,
+    "roadZ": 22.746055031290116,
+    "sourceFront": "+Z"
+  },
+  "1": {
+    "id": "terrace",
+    "angle": 2.8415926535897933,
+    "roadX": 49.76331768047717,
+    "roadZ": 15.393598059411062,
+    "sourceFront": "+Z"
+  },
+  "2": {
+    "id": "commons",
+    "angle": 0.8015926535897934,
+    "roadX": -10.527886143806274,
+    "roadZ": 10.874517462312639,
+    "sourceFront": "+Z"
+  },
+  "3": {
+    "id": "kenney-house",
+    "angle": 0.4385351177837479,
+    "roadX": 24.20323952998038,
+    "roadZ": -11.351130770253716,
+    "sourceFront": "+Z"
+  },
+  "4": {
+    "id": "rustic-villa",
+    "angle": -1.86,
+    "roadX": -3.4847629960435227,
+    "roadZ": 11.711687919886675,
+    "sourceFront": "+Z"
+  },
+  "5": {
+    "id": "uploaded-architecture",
+    "angle": 0.8015926535897936,
+    "roadX": -35.01164207310912,
+    "roadZ": 36.16440260728479,
+    "sourceFront": "+Z"
+  },
+  "debugById": true
+}
