@@ -1,1 +1,1 @@
-v0.20 focus interaction and 50/50 mobile split verification, October 14, 2026. Focus flow tested at 1280, 390, 320px; actual focus and popup screenshots inspected. Walk/collision rerun. v18/v19 records are preceding regression evidence, not new reruns. Older source_test filenames are harness names. Physical-phone FPS unverified.
+v0.20.1 scale, parcel/architecture clearance, placement and 390px focus-flow checks rerun October 14, 2026. Staged, rustic, Irada map pixels inspected. Older version results are preceding regression evidence only. Physical-device FPS unverified.

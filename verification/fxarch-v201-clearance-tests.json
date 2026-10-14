@@ -1,0 +1,11 @@
+{
+  "version": "0.20.1",
+  "source_test": "fxarch-v15-collision-tests.json",
+  "result": {
+    "buildingTriangles": 97944,
+    "obstacles": 21,
+    "hits": [],
+    "railHits": [],
+    "deckHits": []
+  }
+}

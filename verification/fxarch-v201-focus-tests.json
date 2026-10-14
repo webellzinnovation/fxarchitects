@@ -1,0 +1,25 @@
+{
+  "version": "0.20.1",
+  "source_test": "fxarch-v201-focus-tests.json",
+  "result": [
+    {
+      "width": 390,
+      "popupClosed": true,
+      "focused": "rustic-villa",
+      "openVisible": true,
+      "target": [
+        -1.4795274674986996,
+        0,
+        -1.13152210581632
+      ],
+      "split": [
+        387,
+        386
+      ],
+      "overflow": false,
+      "popup": "Modern rustic villa / OBJ sample",
+      "cleared": true,
+      "errors": []
+    }
+  ]
+}

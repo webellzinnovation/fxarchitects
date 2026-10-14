@@ -1,6 +1,6 @@
 # FXARCH - F(x) Architects interactive city
 
-Version 0.20.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
+Version 0.20.1: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
 
 ## Run and deploy
 
@@ -38,6 +38,10 @@ Wide buses/trucks use the wide road. Moving vehicles are suppressed while their 
 Selecting a sidebar project or city model first focuses the camera on its actual parcel. Other scene meshes fade into translucent context; the selected project retains its materials. An Open project button over the selected building opens the portfolio popup. Back to map, Reset, waypoint changes, filtering and Walk clear focus and restore materials. The popup's model/room controls are unchanged.
 
 Mobile below 760px splits the usable area below the header evenly between the city viewport and an independently scrolling portfolio panel. All projects remain reachable in the lower panel. At 390x844 and 320x844 the split is 387px/386px; no outer page overflow. The smaller map retains orbit, zoom, Walk, waypoints and theme controls. This is a CSS viewport split, not device-safe-area or physical-phone performance certification.
+
+## v0.20.1 parcel scale correction
+
+The previous minimum-distance/sqrt(2) square fit severely shrank the staged Innerscene villa near the steam railway. Safe envelopes now use sampled square-to-corridor distance and small within-cell recentering, without relocating any project to a different grid cell. Its safe width rises from 1.11 to 1.87 units. The map-only added garden props are tightened around the villa, then the complete stage is uniformly fitted. Original villa geometry is not distorted. Map house/stage height is now 1.05 units. Rustic and Irada receive larger safe envelopes too, fitted uniformly with a 2-unit height cap. All six parcel/mesh road-and-rail clearance checks pass. Scale remains illustrative, not surveyed. The larger projects remove more unsafe tree candidates: 57 retained.
 
 ## Device-local admin demo
 
