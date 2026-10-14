@@ -1,0 +1,17 @@
+{
+  "version": "0.18.0",
+  "source_test": "fxarch-v16-walk-tests.json",
+  "result": {
+    "desktop": {
+      "active": true,
+      "moves": true,
+      "eyeHeight": 0.34,
+      "orbitDisabled": true
+    },
+    "restores": true,
+    "mobileMoves": true,
+    "overflow": false,
+    "resets": true,
+    "errors": []
+  }
+}

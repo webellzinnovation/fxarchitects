@@ -1,0 +1,21 @@
+{
+  "version": "0.18.0",
+  "source_test": "fxarch-v17-physics-tests.json",
+  "result": {
+    "stats": {
+      "statics": 27102,
+      "dynamic": 22,
+      "people": 96,
+      "ground": "fixed pedestrian plane",
+      "mode": "conservative box proxies, no rigid-body forces"
+    },
+    "houseGeometry": true,
+    "project": true,
+    "vehicle": true,
+    "railSupport": true,
+    "allRailSupports": true,
+    "water": true,
+    "boundary": true,
+    "debugById": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "version": "0.18.0",
+  "source_test": "fxarch-v13-tests.json",
+  "result": {
+    "materialsUnchanged": true,
+    "focusVisible": true,
+    "spotlights": 6,
+    "pools": 6,
+    "errors": [],
+    "filteredLights": 2,
+    "focusOffDay": true,
+    "speed": 2,
+    "manualOverridesAuto": true
+  }
+}

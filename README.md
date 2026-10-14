@@ -1,6 +1,6 @@
 # FXARCH - F(x) Architects interactive city
 
-Version 0.17.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
+Version 0.18.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
 
 ## Run and deploy
 
@@ -15,17 +15,15 @@ npm run preview
 
 Deploy the contents of `dist` to a static host. Vite uses `base: './'`, including for GitHub Pages project subpaths. Source belongs on `main`; the built files can be served from `gh-pages`. No credentials, environment variables, accounts, backend, runtime CDN, external fonts, billing or card are required. Do not attach Firebase billing or upgrade to Blaze.
 
-## Current city: v0.15 radial masterplan
+## Current city: restored pre-radial grid
 
-The v0.14 perimeter accent was replaced. The supplied aerial now informs the underlying skeleton: twelve outward arterials, four irregular polygonal rings, roundabouts at major junctions, a winding river through the central fabric and bridges across it. Local straight segments divide radial wedges. Dense low-rise small buildings fill inner wedges; larger pitches and gaps thin the outer fabric. The six demos are relocated to mixed typed parcels, with a reserved clear envelope around each. This interprets the aerial's skeleton, not a surveyed copy of Coimbatore. The former village/lake arrangement is superseded by this city.
+v0.18 restores the pre-radial map from the v0.13 source archive: warped organic street grid, mixed perimeter blocks, village and six farm fields at left, fishing lake with three boats at right, river with bridges, and the Village & farms / Fishing edge / Whole map waypoints. The radial spider-web layout is removed. No external city mesh is imported. Main city roads and district geometry are recovered source, not a screenshot reconstruction. Existing station/stair clearance required trimming a small section of one context facade.
 
-The metro follows a diagonal radial corridor; steam rail runs outside the outer ring. Project parcel tests inspect full polygons against all 52 road corridors and both rail paths. All six demos report zero overlap, and their rendered mesh vertices stay inside the assigned polygons, including the staged villa base. Building/support/stair/deck and steam-route sampling reports no hits. These numerical checks are sampled and conservatively bounded, not a mathematical proof for arbitrary uploads.
+All six projects remain. The first four keep their original grid parcels; Rustic villa uses the central parcel and IradaGurbanova uses plot-3-5. Gate/entrance sides face their nearest road. Full square project envelopes are conservatively fitted clear of all 16 streets and both rail paths; this makes the staged villa noticeably smaller beside the steam railway than its original overlapping estate. Imported materials/textures are retained. Scale is illustrative, not survey-accurate.
 
-Scale convention: 1 scene unit represents 5 metres. Adult people are around 1.7 m; car length about 4.3 m including lights; bus around 9 m; context houses about 3-5 m high; larger street trees around 8 m before instance variation; local lanes 3.1 m, rings 6.25-11 m, main arterials 9-12.5 m, river about 24 m wide. Procedural project height is reduced to comparable house-scale. Uploaded GLBs use uniform scaling capped by 65% of the available parcel's width/depth and 9 m roadside/corner or 12 m center-block height; native file units are not trusted. Arbitrary GLB proportions are preserved, not inferred as a measured architecture model. Trains are illustrative silhouettes, not dimension-verified replicas; no survey-accurate city claim is made.
+Brighter Day, independent viewer theme, material-preserving Night, Walk collision, debug ID opening, and furnished living-room/bedroom/kitchen cutaway studies remain. The cutaways are illustrative rooms, not verified interiors or a continuous walkthrough. Collision is spatially indexed pedestrian proxies for placed geometry, trees, vehicles/trains and people; fixed ground, water boundaries, no rigid-body forces. Lake/river water cannot be entered. Physical-device FPS remains unverified.
 
-Night focus, natural green trees, editorial viewer-first board and the independent project Day/Night toggle remain. Courtyard house now has original procedural furnished living-room, bedroom and kitchen cutaway studies. These are explicitly illustrative room studies, not verified interiors of the exterior demo. Switch rooms or return to Exterior in the caption controls; room selection scrolls back to the viewer. This is orbit view, not continuous first-person walkthrough.
-
-Controls: orbit/pan/zoom, north, Whole map, River corridor, Outer fabric, Fly, Motion, speed and automatic day/evening/night. Filters select typed projects. Missing facts/photos stay stated. No fake firm projects or real-world portfolio claims.
+New tree pack remains with reduced roadside/river planting. Main tree instances have bright natural greens. Controls and all project dialogs work at desktop and 390px. Source ZIP is flat at its root.
 
 ## Device-local admin demo
 
@@ -48,11 +46,11 @@ Tests use Playwright and Chrome at `/usr/bin/google-chrome-stable`; adapt that p
 - `node test-interactions.mjs`: direct scene click, orbit and ambient motion pause.
 - `node test-admin.mjs`: photo-only save, reload persistence, exterior/room GLB replacement, room switching, invalid GLB rejection, model removal back to placeholder, deletion and mobile internal overflow. This script expects the test-only reference files in `/downloads`; they are not runtime assets.
 
-Screenshots were visually inspected, including mobile dialog bottom content and 320px admin save/delete controls. No uncaught page errors were seen in layout/admin tests. Local production entry returned HTTP 200. No claim of public deployment is made by this bundle. Headless software WebGL is not a physical-phone performance test. Production JS is about 702 kB (187 kB gzip), primarily Three.js; the build reports a chunk-size warning.
+Screenshots were visually inspected, including mobile dialog bottom content and 320px admin save/delete controls. No uncaught page errors were seen in layout/admin tests. Local production entry returned HTTP 200. No claim of public deployment is made by this bundle. Headless software WebGL is not a physical-phone performance test. Production JS is about 719 kB (193 kB gzip), primarily Three.js; the build reports a chunk-size warning.
 
 Three.js is MIT licensed; see THIRD_PARTY_LICENSES.txt. Dependency licenses remain with their packages.
 
-## Revision 0.6: staged modern villa and living city
+## Historical revision 0.6: staged modern villa and living city
 
 The fourth sample now uses Innerscene's original Modern flat-roof villa, CC0 1.0 Universal, verified October 13, 2026 on the model source and library terms. It replaces the earlier Kenney house. Source and license links are also in project description/license text:
 
@@ -70,13 +68,13 @@ White-clay metro viaduct includes pillars, track, train windows/roof details and
 
 `node test-v06.mjs` checks metro/steam movement, walking limb matrices, Motion freeze, fixed scene bounds and zero page scroll at 1280/390. `node test-sample.mjs` verifies model/images and captures desktop/phone details; `--renders` rebuilds exact-model JPEGs. Test assets are not deployed. Physical-phone performance remains unverified; headless software WebGL screenshots are layout evidence, not a GPU benchmark.
 
-## Revision 0.7: day/night toggle
+## Historical revision 0.7: day/night toggle
 
 Sun/moon control switches the city between the original daytime scene and a night scene with dark sky, dim ambient/moon lighting, warm emissive house windows and 40 capped street lamps/pools. Villa glazing responds to night mode too. State is stored in visitor-local localStorage, with graceful fallback when unavailable. The light theme retains the daytime materials and exposure. The UI panels remain light for readability; this is a day/night scene mode, not a fully dark interface skin. Cheap emissive geometry/pools are used rather than dozens of shadow-casting point lights. No bloom claim or physical illumination simulation.
 
 `node test-theme.mjs` verifies persistence on reload, night/day sky changes and captures 1280/390 day/night and night villa. Day, night, and mobile toggle layout were visually inspected. All previous local-admin and model license caveats remain in force.
 
-## Revision 0.8: urban/outskirts and transport detail
+## Historical revision 0.8: urban/outskirts and transport detail
 
 The map now has 63 additional tight-grained white-clay urban buildings in three northern rows, 12 village houses with well/lanes, six crop fields, seven grazing cattle, one tractor route, blue fishing water and dock with three boats plus fishing figures. New camera shortcuts find village/farms, fishing edge and whole map. 96 street walkers replace the earlier 24. Sagging white/gray utility poles/wires follow three curved streets. Procedural project colors are softer terracotta; city structures remain clay white. Existing faceted trees remain in this drop; a licensed realistic-tree replacement is a following work item, not claimed here.
 
@@ -88,7 +86,7 @@ Verification: `test-outskirts.mjs` checks 1280/390/320 layout, new ambient movem
 
 The metro alignment now has gentle smooth bends in the northern clear corridor. Steam follows two internal curving road corridors joined at the northern/southern road edges, with level-crossing boards and gray crossing pads. Its loop rate is .011 per animation-second, raised from .003 in v0.6. Speeds are visually tuned, not a real km/h simulation. Final sweep: zero pillar-building hits, zero railway samples within 1.5 units of plot centers. Rail samples are a clearance check, not a proof against arbitrary oversized future uploads.
 
-## Revision 0.9: licensed textured trees and soft map edges
+## Historical revision 0.9: licensed textured trees and soft map edges
 
 Quaternius CommonTree_3 (CC0) replaces faceted crowns with slender branched trunks and textured, muted-green leaf clusters. Derived repeated geometry is 584 triangles per tree: 104 bark and 480 leaf. 512px textures, selected enlarged leaf cards, per-group instancing and frustum culling bound the cost. Geometry reduction runs before deployment, not at page startup. Source: https://poly.pizza/m/QVOop92WmG and public/models/TREE-LICENSE.txt. These are licensed textured low-poly trees, not photogrammetry.
 
@@ -114,7 +112,7 @@ Latest admin regression passed photo-only save/reload, exterior/room GLB replace
 New scripts: test-v10.mjs, test-v10-detail.mjs and test-v10-collision.mjs. Run them individually after building. Test screenshots/results are evidence, not runtime assets. Public deployment is handled separately; these ZIPs do not prove it is live.
 
 
-## Revision 0.11: varied urban fabric, 3D entourage and motion controls
+## Historical revision 0.11: varied urban fabric, 3D entourage and motion controls
 
 This revision supersedes v0.10's identical courtyard footprints and all photo-cutout people. Unequal road intervals make small, elongated and larger parcels while keeping the metro/steam rail axes. Closed courtyards, U courtyards and linear pairs are mixed. Each block is split into individual height parcels: about .95-5.85 scene units, averaging 3.82 along avenues versus 1.96 inside. White setbacks, stepped tops, parapets, penthouses and occasional pitched roofs vary the skyline. All four demo project IDs and plot positions remain stable in their logical plots, though physical plot coordinates adapt to the new road intervals. This interprets the reference's varied fabric, not its exact diagonal masterplan or surveyed geometry.
 
@@ -129,7 +127,7 @@ Auto mode cycles day, evening, night at 60-second boundaries with an eight-secon
 Final collision coverage: 160,603 non-ground/non-foliage context/project/outskirts triangle bounds, 15 supports/six stair runs, station deck/roof envelopes, 500 metro deck samples and 1,000 steam samples: no hits. Layout/Motion tests have no errors or outer overflow at 1280/390/320; moving walkers and road vehicles freeze correctly. Cycle tests verify evening/night/day, speed and manual override. Full admin logic regression and separate actual rendering inspection pass. Current headless scene: about 507k triangles/521 calls desktop, 459k/428 at 390px and 434k/393 at 320px. Physical-phone FPS is unverified and the extra geometry may cost more on weaker devices. No backend, account, card, billing or Firebase Blaze was added.
 
 
-## Revision 0.12: mixed footprints, architecture details and night hierarchy
+## Historical revision 0.12: mixed footprints, architecture details and night hierarchy
 
 Six footprint families replace the repeated square-ring plan: L with side garden, offset U, staggered slabs, split courts, asymmetric perimeter and terraced L. Rectangular masses, short wings and offset/side/split gardens mix across the existing unequal plots. This first footprint step retained the prior heights and road axes; the later steering below lowers heights and adds gentle road bends. Metro and project assignments remain intact. This is not the exact reference masterplan.
 
@@ -146,13 +144,13 @@ Later steering in the same v0.12 round lowers context to house-scale (roughly .6
 Final v0.12 verification: 1280/390/320 layout/Motion no errors/outer overflow; rail dwell/cruise, walkers/vehicles freeze/resume; Auto stage/speed/manual override and manual theme persistence pass. Admin save/reload, GLB replacement/removal, rooms, invalid-file rejection and deletion pass (logic harness only disables rendering, actual scene inspected separately). Actual default overview, top-down, architectural closeup and 390px night pixels inspected. Current scene ~409k triangles/592 calls desktop, ~370k/469 at 390px, ~363k/440 at 320px. JS ~705kB/188kB gzip. Physical-phone FPS unverified; fixed shadow filtering is not photoreal ray tracing. No account, backend, card or paid service added.
 
 
-## Revision 0.13: night plot focus without changing project materials
+## Historical revision 0.13: night plot focus without changing project materials
 
 Supersedes v0.12's emissive project tint. Project base colours, texture maps, emissive colours and emissive intensity now remain unchanged between day and night. A neutral-warm, non-shadow-casting spotlight from an architectural front/side angle lights each visible project and immediate plot. A soft transparent radial ground pool supports the focus; surrounding ambient/sun lighting is darker. Filtered-out projects have no remaining plot light. Day disables all project focus lights/pools. Local uploaded projects participate in the same presentation.
 
 Verified project material signatures are unchanged across the night toggle, four spotlights/four pools exist for the four demos, filtering corner leaves two, and day hides focus lighting. Auto cycle/speed/manual override and theme persistence tests pass. Actual desktop and 390px night pixels inspected: design colour is readable, no orange emissive facade wash, plots form focused light pools against darker context. This is an illustrative architectural night presentation, not proof of actual installed lighting for a project whose model supplies none. Four spotlights add shader work, but no new shadow maps; physical-phone FPS is unverified. Geometry is unchanged from the clear v0.12 collision sweep. No account, backend, card or paid service added.
 
-## Revision 0.14: project board, straight street geometry and wider-city language
+## Historical revision 0.14: project board, straight street geometry and wider-city language
 
 This revision supersedes earlier grid/curved-road descriptions. Street polylines have seven straight segments between shared displaced intersection nodes. Context mesh envelopes follow those irregular parcel edges. Existing metro axis and stations are retained. An outer polygonal ring, outward approaches and small roundabout islands suggest a wider road system; they are not a full radial core. The gently bending river stays at the edge, with two pedestrian bridges, rather than cutting across project plots. Northern outer-row housing is thinner. Brightened leaf texture and a modest stable green emissive contribution retain readable green tree silhouettes at night.
 
@@ -192,12 +190,3 @@ Final checks: six project polygons/mesh vertices clear of 52 road corridors and 
 
 v0.16 trees use four selected species (01/04/07/11) from the user-supplied CGTrader Low Poly Trees Mega Pack (item 3304599), not the previous Quaternius tree. They share one 512px colour atlas and are instanced per species/parent. Reduced planting counts remain. Designer name is pending. The source FBX and archive are not bundled in deployment; only selected geometry and atlas are served.
 
-## v0.17 old-style fabric with targeted fixes
-
-At the user's request, the dense mixed-building experiment was dropped. The lighter v0.16 context fabric is restored exactly: 871 context houses with the same footprints, positions and planting. Original radial roads, rings, roundabouts and river remain unchanged. No Kusatsu geometry is imported.
-
-All six demo buildings now orient their entrance side toward the nearest street. Rustic villa's visible timber gate, staged villa's front door/steps, Courtyard's courtyard entry and Commons' colonnade face the road. Terrace's primary elevation and IradaGurbanova's entrance-step side are aligned too. Models are uniformly re-fitted after rotation so their corners remain inside the project parcel. Debug openProject accepts a project ID or object.
-
-Day exposure is 1.3 (was 1.15), hemisphere light 2.1 (was 1.8), sun 3.4 (was 3.0). Project night spotlights are stronger but original texture/colour materials are retained. Viewer theme remains independent.
-
-Walk uses conservative pedestrian collision proxies, spatially indexed for static objects: context houses, project geometry, tree trunks, rail supports/stairs, moving vehicles and steam carriages, and people. River and world edge block movement; ground stays at fixed eye height. Elevated metro is overhead. Dynamic boxes are intentionally conservative. Models and local admin changes refresh collision proxies. This is not a rigid-body simulation: no gravity-driven jumping, vehicle impacts, movable buildings, interior navigation mesh or simulated buoyancy. Mobile FPS remains unverified on a physical device.

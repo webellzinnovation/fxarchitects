@@ -1,0 +1,1 @@
+Current v0.18 restored-grid verification, captured October 14, 2026. Older test filenames in source_test are harness names, not map versions. Room phone check passed room presence, independent Night and no overflow. Static/parcel tests are conservative bounds checks, not navigation-mesh or rigid-body simulation. Headless desktop/390/320 checks do not verify physical-device FPS.

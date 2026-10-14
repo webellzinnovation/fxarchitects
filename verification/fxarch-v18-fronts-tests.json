@@ -1,0 +1,49 @@
+{
+  "version": "0.18.0",
+  "source_test": "fxarch-v17-front-tests.json",
+  "result": {
+    "0": {
+      "id": "courtyard",
+      "angle": 1.7380099427133293,
+      "roadX": -5.248030064031978,
+      "roadZ": -1.911398348057027,
+      "sourceFront": "+Z"
+    },
+    "1": {
+      "id": "terrace",
+      "angle": 1.6757056083690043,
+      "roadX": 12.43639765872125,
+      "roadZ": 7.495482367898615,
+      "sourceFront": "+Z"
+    },
+    "2": {
+      "id": "commons",
+      "angle": -0.10462999672015864,
+      "roadX": -1.5316719998844586,
+      "roadZ": -11.713990632835712,
+      "sourceFront": "+Z"
+    },
+    "3": {
+      "id": "kenney-house",
+      "angle": -1.5707963267948966,
+      "roadX": -16,
+      "roadZ": -8.813612865414017,
+      "sourceFront": "+Z"
+    },
+    "4": {
+      "id": "rustic-villa",
+      "angle": 3.022864860112649,
+      "roadX": -0.6831903771803881,
+      "roadZ": -4.466550909060766,
+      "sourceFront": "+Z"
+    },
+    "5": {
+      "id": "uploaded-architecture",
+      "angle": -0.0701377942404615,
+      "roadX": -0.8213685115814113,
+      "roadZ": 16.19485721465563,
+      "sourceFront": "+Z"
+    },
+    "debugById": true
+  }
+}

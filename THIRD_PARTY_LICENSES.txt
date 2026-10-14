@@ -1,0 +1,38 @@
+The MIT License
+
+Copyright © 2010-2025 three.js authors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+MODERN RUSTIC VILLA
+User-supplied OBJ from CGTrader by ArchNovaStudio.
+Source: https://www.cgtrader.com/free-3d-models/exterior/house/modern-rustic-villa-luxury-countryside-house-3d-model
+Royalty Free license supplied by user context. No AI training.
+Converted, simplified; v0.16 uses user-supplied original MTL and all ten referenced JPG texture maps, resized for this web demo.
+
+MODERN VILLA / IRADAGURBANOVA
+User supplied project-model-2.obj to include as a demo.
+Model: Modern Villa free 3D model by IradaGurbanova on CGTrader.
+Source: https://www.cgtrader.com/free-3d-models/architectural/engineering/modern-villa-free-3d-model
+The source download has OBJ and STL only, with no MTL or textures. Original colours are unavailable.
+Converted, simplified, neutral material replacement; referenced Untitled.mtl/textures not supplied.
+
+LOW POLY TREES MEGA PACK
+User-supplied CGTrader free pack, item 3304599. Designer name not yet supplied.
+Selected species 01, 04, 07, 11 from LowPoly_Tree_Collection_01.fbx, using its shared colour atlas at 512px. Instanced at reduced planting density. No claim of CC0 is made for this pack. Original Quaternius CC0 asset attribution above is retained for older revisions.

@@ -1,0 +1,29 @@
+{
+  "version": "0.18.0",
+  "source_test": "fxarch-admin-tests.json",
+  "result": {
+    "detailOverflow": {
+      "dialog": false,
+      "details": false
+    },
+    "restoredPlaceholder": true,
+    "invalidRejected": "Not saved: GLB file is too short.",
+    "deletionWorked": true,
+    "placeholder": "Temporary placeholder. This building is not your project design; upload a GLB to replace it.",
+    "photosOnly": "Living room: photos only, no 3D model uploaded",
+    "reloadPersistence": true,
+    "modelReplaced": true,
+    "overflow": false,
+    "errors": [],
+    "record": [
+      {
+        "id": "137ba12b-f876-4d39-84f3-557be1ba607b",
+        "plotId": "plot-1-5",
+        "name": "Local courtyard test",
+        "modelBytes": 1984,
+        "rooms": 1,
+        "photoCount": 1
+      }
+    ]
+  }
+}

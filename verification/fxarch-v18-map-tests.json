@@ -1,0 +1,75 @@
+{
+  "version": "0.18.0",
+  "source_test": "fxarch-v18-map-tests.json",
+  "result": {
+    "version": "0.18.0",
+    "projects": 6,
+    "waypoints": [
+      "Village & farms",
+      "Fishing edge",
+      "Whole map"
+    ],
+    "landscape": {
+      "villageHouses": 12,
+      "outerBuildings": 38,
+      "fields": 6,
+      "cattle": 7,
+      "boats": 3,
+      "tractor": 1
+    },
+    "collision": {
+      "statics": 27129,
+      "dynamic": 22,
+      "people": 96,
+      "ground": "fixed pedestrian plane",
+      "mode": "conservative box proxies, no rigid-body forces"
+    },
+    "plots": [
+      {
+        "id": "plot-1-2",
+        "name": "Modern villa / staged model sample",
+        "width": 1.1063118526335654,
+        "x": -14.387719386895753,
+        "z": -8.813612865414017
+      },
+      {
+        "id": "plot-2-3",
+        "name": "Courtyard house",
+        "width": 4.05183737570513,
+        "x": -8.60536278734413,
+        "z": -1.344715170778372
+      },
+      {
+        "id": "plot-3-1",
+        "name": "The urban commons",
+        "width": 2.154799327400415,
+        "x": -1.3163057568403855,
+        "z": -13.764834299671909
+      },
+      {
+        "id": "plot-3-3",
+        "name": "Modern rustic villa / OBJ sample",
+        "width": 3.527943638629571,
+        "x": -1.12359496366051,
+        "z": -0.7746328705189128
+      },
+      {
+        "id": "plot-3-5",
+        "name": "Modern villa / IradaGurbanova",
+        "width": 2.016670181403862,
+        "x": -0.6836942431596145,
+        "z": 14.235165700328091
+      },
+      {
+        "id": "plot-4-4",
+        "name": "Terrace studio",
+        "width": 5.197388089917365,
+        "x": 8.071306777204384,
+        "z": 7.955108362838767
+      }
+    ],
+    "lake": true,
+    "overflow": false,
+    "errors": []
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "version": "0.18.0",
+  "source_test": "fxarch-v15-motion-tests.json",
+  "result": {
+    "peopleMove": true,
+    "vehiclesMove": true,
+    "metroDwell": true,
+    "metroCruise": true,
+    "time": 0.3333000000000002,
+    "frozen": true,
+    "widths": [
+      {
+        "w": 1280,
+        "overflow": false
+      },
+      {
+        "w": 390,
+        "overflow": false
+      },
+      {
+        "w": 320,
+        "overflow": false
+      }
+    ]
+  }
+}
