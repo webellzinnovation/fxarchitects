@@ -1,0 +1,63 @@
+{
+  "version": "0.20.0",
+  "source_test": "fxarch-v20-focus-tests.json",
+  "result": [
+    {
+      "width": 1280,
+      "popupClosed": true,
+      "focused": "rustic-villa",
+      "openVisible": true,
+      "target": [
+        -0.8808499089713832,
+        0,
+        -0.6072787041158283
+      ],
+      "split": [
+        756,
+        756
+      ],
+      "overflow": false,
+      "popup": "Modern rustic villa / OBJ sample",
+      "cleared": true,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "popupClosed": true,
+      "focused": "rustic-villa",
+      "openVisible": true,
+      "target": [
+        -1.123594963655908,
+        0,
+        -0.7746328705157399
+      ],
+      "split": [
+        387,
+        386
+      ],
+      "overflow": false,
+      "popup": "Modern rustic villa / OBJ sample",
+      "cleared": true,
+      "errors": []
+    },
+    {
+      "width": 320,
+      "popupClosed": true,
+      "focused": "rustic-villa",
+      "openVisible": true,
+      "target": [
+        -1.121651449343945,
+        0,
+        -0.7732929659068177
+      ],
+      "split": [
+        387,
+        386
+      ],
+      "overflow": false,
+      "popup": "Modern rustic villa / OBJ sample",
+      "cleared": true,
+      "errors": []
+    }
+  ]
+}

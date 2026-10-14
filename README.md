@@ -1,6 +1,6 @@
 # FXARCH - F(x) Architects interactive city
 
-Version 0.19.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
+Version 0.20.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
 
 ## Run and deploy
 
@@ -32,6 +32,12 @@ Full world-space crown envelopes are tested against road/sidewalk corridors, cro
 Bundled villa GLBs render on the map with their actual meshes and textures. Peach placeholder blocks are no longer displayed while bundled models load. Map labels report loading, or a failed load with tap-to-retry. Cold/slow connections can still take time to fetch and decode the models; a detail dialog loads its own copy. No low-detail phone replacement is used. Rustic has 34 meshes and 10 texture-bearing materials; Irada uses its neutral untextured source conversion.
 
 Wide buses/trucks use the wide road. Moving vehicles are suppressed while their conservative footprint meets occupied architecture; pedestrian parts are suppressed while their path meets an occupied footprint. This avoids visual building intersections but is not road traffic simulation: no right-of-way, avoidance steering, stoplights or crowd forces are claimed. Collision now also includes retained curb furniture and lamp posts. Bridge traversal and physical-phone FPS remain unverified/unsupported as noted above.
+
+## v0.20 selection and mobile split
+
+Selecting a sidebar project or city model first focuses the camera on its actual parcel. Other scene meshes fade into translucent context; the selected project retains its materials. An Open project button over the selected building opens the portfolio popup. Back to map, Reset, waypoint changes, filtering and Walk clear focus and restore materials. The popup's model/room controls are unchanged.
+
+Mobile below 760px splits the usable area below the header evenly between the city viewport and an independently scrolling portfolio panel. All projects remain reachable in the lower panel. At 390x844 and 320x844 the split is 387px/386px; no outer page overflow. The smaller map retains orbit, zoom, Walk, waypoints and theme controls. This is a CSS viewport split, not device-safe-area or physical-phone performance certification.
 
 ## Device-local admin demo
 
