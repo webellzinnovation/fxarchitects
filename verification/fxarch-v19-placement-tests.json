@@ -1,0 +1,20 @@
+{
+  "version": "0.19.0",
+  "source_test": "fxarch-v19-audit-tests.json",
+  "result": {
+    "trees": 70,
+    "hits": 0,
+    "furniture": 39,
+    "furnitureHits": 0,
+    "vehicleHits": 0,
+    "visibleVehicleSamples": 1325,
+    "stats": {
+      "treesBefore": 244,
+      "treesRetained": 70,
+      "treesRemoved": 174,
+      "furnitureRemoved": 41
+    },
+    "peopleHits": 0,
+    "peoplePolicy": "zero-scale while occupied, not a physics simulation"
+  }
+}

@@ -1,6 +1,6 @@
 # FXARCH - F(x) Architects interactive city
 
-Version 0.18.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
+Version 0.19.0: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
 
 ## Run and deploy
 
@@ -24,6 +24,14 @@ All six projects remain. The first four keep their original grid parcels; Rustic
 Brighter Day, independent viewer theme, material-preserving Night, Walk collision, debug ID opening, and furnished living-room/bedroom/kitchen cutaway studies remain. The cutaways are illustrative rooms, not verified interiors or a continuous walkthrough. Collision is spatially indexed pedestrian proxies for placed geometry, trees, vehicles/trains and people; fixed ground, water boundaries, no rigid-body forces. Lake/river water cannot be entered. Physical-device FPS remains unverified.
 
 New tree pack remains with reduced roadside/river planting. Main tree instances have bright natural greens. Controls and all project dialogs work at desktop and 390px. Source ZIP is flat at its root.
+
+## v0.19 placement and map models
+
+Full world-space crown envelopes are tested against road/sidewalk corridors, crossings, both rail paths, bridge paths and outskirts lanes. Unsafe trees are removed instead of pushed onto a neighboring building. This is deliberately sparse planting: 70 retained from 244 candidates. Curb signals/utility poles and lamps are screened against roads and occupied geometry; the unsafe utility network is removed rather than leaving unsupported wires. Projects and restored street layout are unchanged.
+
+Bundled villa GLBs render on the map with their actual meshes and textures. Peach placeholder blocks are no longer displayed while bundled models load. Map labels report loading, or a failed load with tap-to-retry. Cold/slow connections can still take time to fetch and decode the models; a detail dialog loads its own copy. No low-detail phone replacement is used. Rustic has 34 meshes and 10 texture-bearing materials; Irada uses its neutral untextured source conversion.
+
+Wide buses/trucks use the wide road. Moving vehicles are suppressed while their conservative footprint meets occupied architecture; pedestrian parts are suppressed while their path meets an occupied footprint. This avoids visual building intersections but is not road traffic simulation: no right-of-way, avoidance steering, stoplights or crowd forces are claimed. Collision now also includes retained curb furniture and lamp posts. Bridge traversal and physical-phone FPS remain unverified/unsupported as noted above.
 
 ## Device-local admin demo
 
