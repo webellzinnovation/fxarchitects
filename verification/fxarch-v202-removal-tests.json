@@ -1,0 +1,42 @@
+[
+  {
+    "width": 1280,
+    "removed": true,
+    "popupClosed": true,
+    "focused": "rustic-villa",
+    "openVisible": true,
+    "target": [
+      -1.1630743559345669,
+      0,
+      -0.8895031510790102
+    ],
+    "split": [
+      756,
+      756
+    ],
+    "overflow": false,
+    "popup": "Modern rustic villa / OBJ sample",
+    "cleared": true,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "removed": true,
+    "popupClosed": true,
+    "focused": "rustic-villa",
+    "openVisible": true,
+    "target": [
+      -1.4021357145224005,
+      0,
+      -1.072333965532175
+    ],
+    "split": [
+      387,
+      386
+    ],
+    "overflow": false,
+    "popup": "Modern rustic villa / OBJ sample",
+    "cleared": true,
+    "errors": []
+  }
+]

@@ -1,6 +1,6 @@
 # FXARCH - F(x) Architects interactive city
 
-Version 0.20.1: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
+Version 0.20.2: Phase 1 city plus Phase 2 device-local admin demo. Real Three.js, not a prerendered city image.
 
 ## Run and deploy
 
@@ -208,3 +208,7 @@ Final checks: six project polygons/mesh vertices clear of 52 road corridors and 
 
 v0.16 trees use four selected species (01/04/07/11) from the user-supplied CGTrader Low Poly Trees Mega Pack (item 3304599), not the previous Quaternius tree. They share one 512px colour atlas and are instanced per species/parent. Reduced planting counts remain. Designer name is pending. The source FBX and archive are not bundled in deployment; only selected geometry and atlas are served.
 
+
+## v0.20.2 map overlay removal
+
+Removed the City as a canvas heading/subtitle and the Village & farms / Fishing edge / Whole map buttons and their handlers/styles. Landscape remains. Reset, orbit, zoom, Walk, theme, compass, project selection and 50/50 mobile layout remain. Previous waypoint descriptions above are historical, not current UI.
