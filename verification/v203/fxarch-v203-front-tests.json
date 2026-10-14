@@ -1,0 +1,21 @@
+{
+  "0": {
+    "id": "kenney-house",
+    "angle": 1.5077562184067743,
+    "frontAlignment": 0.9999878974149149,
+    "popupClosed": true
+  },
+  "1": {
+    "id": "rustic-villa",
+    "angle": 3.017123409453722,
+    "frontAlignment": 0.999221193306422,
+    "popupClosed": true
+  },
+  "2": {
+    "id": "uploaded-architecture",
+    "angle": -0.0701377942404615,
+    "frontAlignment": 0.9990339886365345,
+    "popupClosed": true
+  },
+  "debugById": true
+}

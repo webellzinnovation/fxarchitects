@@ -1,0 +1,21 @@
+{
+  "0": {
+    "id": "courtyard",
+    "angle": -1.4602417530608458,
+    "frontAlignment": 0.9999136686759358,
+    "popupClosed": true
+  },
+  "1": {
+    "id": "terrace",
+    "angle": 1.6757056083690043,
+    "frontAlignment": 0.9997710052633664,
+    "popupClosed": true
+  },
+  "2": {
+    "id": "commons",
+    "angle": 3.0729481310921423,
+    "frontAlignment": 0.9994438343680224,
+    "popupClosed": true
+  },
+  "debugById": true
+}

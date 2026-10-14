@@ -212,3 +212,6 @@ v0.16 trees use four selected species (01/04/07/11) from the user-supplied CGTra
 ## v0.20.2 map overlay removal
 
 Removed the City as a canvas heading/subtitle and the Village & farms / Fishing edge / Whole map buttons and their handlers/styles. Landscape remains. Reset, orbit, zoom, Walk, theme, compass, project selection and 50/50 mobile layout remain. Previous waypoint descriptions above are historical, not current UI.
+
+## v0.20.3
+Project focus now approaches the road-facing front of each bundled/procedural model, rather than a fixed world direction. The three imported entrance faces were checked from source-axis renders. Bundled detail viewers also start at the verified front. Geometry and plot scale are unchanged; the staged-villa original-size question remains pending. Verification is in `verification/v203/`.
